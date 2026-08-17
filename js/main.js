@@ -678,19 +678,19 @@
   }
 
   /* ──────────────────────────────────────────────────────────
-     FUTURISTIC HIGH-END POPUP SUCCESS MODAL & NOTIFICATION
+     SLEEK NON-INTRUSIVE FLOATING POPUP NOTIFICATION (AUTO-CLOSES IN 3.5s)
   ────────────────────────────────────────────────────────── */
   function showSuccessModal(formData = {}) {
     const rawName = (formData.name || "").trim();
     const safeName = rawName ? rawName.replace(/[<>]/g, "") : "There";
     const serviceName = (formData.service || "").trim();
 
-    // 1. Synthesize a premium futuristic 3-tone chime sound using Web Audio API
+    // 1. Synthesize a premium soft electronic chime
     try {
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
       if (AudioContextClass) {
         const audioCtx = new AudioContextClass();
-        const playTone = (freq, start, duration, gain = 0.08) => {
+        const playTone = (freq, start, duration, gain = 0.06) => {
           const osc = audioCtx.createOscillator();
           const gainNode = audioCtx.createGain();
           osc.type = "sine";
@@ -703,305 +703,244 @@
           osc.stop(start + duration);
         };
         const now = audioCtx.currentTime;
-        playTone(523.25, now, 0.12, 0.06);         // C5
-        playTone(659.25, now + 0.09, 0.14, 0.07);   // E5
-        playTone(783.99, now + 0.18, 0.28, 0.09);   // G5
-        playTone(1046.50, now + 0.28, 0.35, 0.08);  // C6
+        playTone(523.25, now, 0.1, 0.05);         // C5
+        playTone(659.25, now + 0.08, 0.12, 0.06);  // E5
+        playTone(783.99, now + 0.16, 0.22, 0.07);  // G5
       }
     } catch (soundError) {
-      // Gracefully ignore audio errors
+      // Gracefully ignore
     }
 
-    // 2. Inject rich modal & celebration CSS styles
-    if (!document.getElementById("success-modal-deluxe-styles")) {
+    // 2. Inject floating notification styles if not already present
+    if (!document.getElementById("aq-float-notify-styles")) {
       const styles = document.createElement("style");
-      styles.id = "success-modal-deluxe-styles";
+      styles.id = "aq-float-notify-styles";
       styles.textContent = `
-        /* Modal Backdrop */
-        .aq-modal-backdrop {
+        /* Floating Toast Container (Non-blocking, leaves whole website 100% clickable) */
+        .aq-toast-wrapper {
           position: fixed;
-          inset: 0;
-          z-index: 999999;
-          background: rgba(2, 4, 10, 0.82);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 20px;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
-        }
-        .aq-modal-backdrop.is-active {
-          opacity: 1;
-          visibility: visible;
-        }
-
-        /* Particle Canvas */
-        .aq-confetti-canvas {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
+          bottom: 24px;
+          right: 24px;
+          z-index: 9999999;
           pointer-events: none;
-          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          max-width: 420px;
+          width: calc(100vw - 32px);
+        }
+        @media (max-width: 640px) {
+          .aq-toast-wrapper {
+            bottom: 16px;
+            right: 50%;
+            transform: translateX(50%);
+            align-items: center;
+          }
         }
 
-        /* Modal Dialog Card */
-        .aq-modal-card {
+        /* Floating Notification Card */
+        .aq-toast-card {
+          pointer-events: auto;
           position: relative;
-          z-index: 2;
+          background: linear-gradient(135deg, rgba(8, 14, 28, 0.98) 0%, rgba(4, 7, 18, 0.99) 100%);
+          border: 1.5px solid #00e5c4;
+          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8),
+                      0 0 25px rgba(0, 229, 196, 0.25),
+                      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+          border-radius: 18px;
+          padding: 18px 20px 16px;
           width: 100%;
-          max-width: 520px;
-          background: linear-gradient(145deg, rgba(12, 18, 36, 0.96) 0%, rgba(6, 9, 20, 0.98) 100%);
-          border: 1.5px solid rgba(0, 242, 254, 0.35);
-          border-radius: 24px;
-          box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.9),
-                      0 0 50px rgba(0, 242, 254, 0.22),
-                      inset 0 1px 1px rgba(255, 255, 255, 0.25);
-          padding: 36px 30px 30px;
-          text-align: center;
           color: #f1f5f9;
-          transform: scale(0.88) translateY(20px);
-          transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.35s ease;
+          transform: translateY(30px) scale(0.95);
+          opacity: 0;
+          transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           overflow: hidden;
         }
-        .aq-modal-backdrop.is-active .aq-modal-card {
-          transform: scale(1) translateY(0);
+        .aq-toast-card.is-visible {
+          transform: translateY(0) scale(1);
+          opacity: 1;
         }
 
-        /* Top Radiant Ambient Light */
-        .aq-modal-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 15%;
-          right: 15%;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, #00e5c4, #00f2fe, transparent);
-          box-shadow: 0 0 15px #00e5c4;
-        }
-
-        /* Close Button */
-        .aq-modal-close {
-          position: absolute;
-          top: 16px;
-          right: 16px;
-          width: 34px;
-          height: 34px;
-          border-radius: 50%;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          background: rgba(255, 255, 255, 0.05);
-          color: #94a3b8;
+        /* Top Header Row */
+        .aq-toast-header {
           display: flex;
           align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          font-size: 20px;
-          line-height: 1;
-          transition: all 0.2s ease;
+          justify-content: space-between;
+          margin-bottom: 8px;
         }
-        .aq-modal-close:hover {
-          background: rgba(255, 255, 255, 0.15);
-          color: #ffffff;
-          border-color: #00e5c4;
-          transform: rotate(90deg);
-        }
-
-        /* Animated Glowing Icon */
-        .aq-icon-wrapper {
-          position: relative;
-          width: 76px;
-          height: 76px;
-          margin: 0 auto 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .aq-icon-ring {
-          position: absolute;
-          inset: 0;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(0, 229, 196, 0.25) 0%, transparent 70%);
-          border: 2px solid rgba(0, 229, 196, 0.5);
-          animation: aqRingPulse 2s infinite ease-out;
-        }
-        .aq-icon-circle {
-          position: relative;
-          z-index: 2;
-          width: 64px;
-          height: 64px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, rgba(0, 229, 196, 0.2) 0%, rgba(0, 242, 254, 0.3) 100%);
-          border: 2px solid #00e5c4;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #00e5c4;
-          box-shadow: 0 0 25px rgba(0, 229, 196, 0.5);
-        }
-        .aq-icon-circle svg {
-          stroke-dasharray: 50;
-          stroke-dashoffset: 50;
-          animation: aqCheckDraw 0.6s 0.2s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-        }
-
-        @keyframes aqRingPulse {
-          0% { transform: scale(0.9); opacity: 0.9; }
-          100% { transform: scale(1.45); opacity: 0; }
-        }
-        @keyframes aqCheckDraw {
-          to { stroke-dashoffset: 0; }
-        }
-
-        /* Status Badge */
-        .aq-status-badge {
+        .aq-toast-badge {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          padding: 4px 12px;
-          border-radius: 20px;
           background: rgba(0, 229, 196, 0.12);
-          border: 1px solid rgba(0, 229, 196, 0.35);
+          border: 1px solid rgba(0, 229, 196, 0.4);
+          padding: 3px 9px;
+          border-radius: 20px;
           font-family: var(--font-mono, monospace);
-          font-size: 11px;
+          font-size: 10.5px;
           font-weight: 700;
-          letter-spacing: 1px;
-          color: #00e5c4;
+          letter-spacing: 0.5px;
+          color: #00e5c4 !important;
           text-transform: uppercase;
-          margin-bottom: 12px;
         }
-        .aq-status-dot {
-          width: 7px;
-          height: 7px;
+        .aq-toast-badge-dot {
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
           background: #00e5c4;
           box-shadow: 0 0 8px #00e5c4;
-          animation: aqDotGlow 1.5s infinite alternate ease-in-out;
         }
-        @keyframes aqDotGlow {
-          from { opacity: 0.4; }
-          to { opacity: 1; transform: scale(1.2); }
-        }
-
-        /* Modal Typography */
-        .aq-modal-title {
-          font-size: 24px;
-          font-weight: 800;
-          color: #ffffff;
-          margin: 0 0 10px;
-          letter-spacing: -0.5px;
-          font-family: var(--font-display, sans-serif);
-        }
-        .aq-modal-desc {
-          font-size: 14px;
-          line-height: 1.6;
+        .aq-toast-close {
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           color: #cbd5e1;
-          margin: 0 0 20px;
-        }
-        .aq-modal-desc strong {
-          color: #00f2fe;
-        }
-
-        /* Info Highlight Card */
-        .aq-info-box {
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          border-radius: 16px;
-          padding: 14px 18px;
-          margin-bottom: 24px;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 12px;
-          text-align: left;
-        }
-        .aq-info-item {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .aq-info-icon {
-          font-size: 18px;
-          flex-shrink: 0;
-        }
-        .aq-info-label {
-          font-size: 10px;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          color: #94a3b8;
-          font-weight: 600;
-        }
-        .aq-info-val {
-          font-size: 12.5px;
-          color: #ffffff;
-          font-weight: 600;
-        }
-
-        /* Action Buttons */
-        .aq-modal-actions {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-        .aq-btn-wa {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 10px;
-          padding: 13px 20px;
-          border-radius: 12px;
-          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 1;
+          transition: all 0.2s ease;
+        }
+        .aq-toast-close:hover {
+          background: rgba(255, 255, 255, 0.2);
           color: #ffffff;
+          border-color: #00e5c4;
+        }
+
+        /* Body Content */
+        .aq-toast-body {
+          display: flex;
+          gap: 12px;
+          align-items: flex-start;
+          margin-bottom: 12px;
+        }
+        .aq-toast-icon {
+          width: 36px;
+          height: 36px;
+          flex-shrink: 0;
+          border-radius: 50%;
+          background: rgba(0, 229, 196, 0.15);
+          border: 1.5px solid #00e5c4;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #00e5c4;
+          box-shadow: 0 0 12px rgba(0, 229, 196, 0.4);
+        }
+        .aq-toast-text {
+          flex-grow: 1;
+        }
+        .aq-toast-title {
+          font-size: 15px;
+          font-weight: 800;
+          color: #ffffff !important;
+          margin: 0 0 3px 0;
+          letter-spacing: -0.2px;
+          font-family: var(--font-display, sans-serif);
+        }
+        .aq-toast-desc {
+          font-size: 12px;
+          color: #cbd5e1 !important;
+          margin: 0;
+          line-height: 1.4;
+        }
+        .aq-toast-desc strong {
+          color: #00f2fe !important;
+        }
+        .aq-toast-subinfo {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 11px;
+          color: #94a3b8 !important;
+          margin-top: 5px;
+        }
+        .aq-toast-subinfo span {
+          color: #00e5c4 !important;
+          font-weight: 600;
+        }
+
+        /* Action Buttons Row */
+        .aq-toast-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .aq-toast-wa-btn {
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          padding: 8px 14px;
+          border-radius: 10px;
+          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          color: #ffffff !important;
           text-decoration: none;
-          font-size: 14px;
+          font-size: 12px;
           font-weight: 700;
-          box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
-          transition: all 0.25s ease;
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+          transition: all 0.2s ease;
           border: none;
           cursor: pointer;
         }
-        .aq-btn-wa:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+        .aq-toast-wa-btn:hover {
+          transform: translateY(-1px);
           filter: brightness(1.08);
+          box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
         }
-        .aq-btn-close {
-          padding: 12px 20px;
-          border-radius: 12px;
+        .aq-toast-dismiss-btn {
+          padding: 8px 14px;
+          border-radius: 10px;
           background: rgba(255, 255, 255, 0.06);
           border: 1px solid rgba(255, 255, 255, 0.15);
-          color: #e2e8f0;
-          font-size: 13.5px;
+          color: #cbd5e1 !important;
+          font-size: 12px;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.2s ease;
         }
-        .aq-btn-close:hover {
-          background: rgba(255, 255, 255, 0.12);
+        .aq-toast-dismiss-btn:hover {
+          background: rgba(255, 255, 255, 0.15);
+          color: #ffffff !important;
           border-color: #00f2fe;
-          color: #ffffff;
         }
 
-        @media (max-width: 480px) {
-          .aq-modal-card {
-            padding: 28px 20px 22px;
-          }
-          .aq-modal-title {
-            font-size: 20px;
-          }
-          .aq-info-box {
-            grid-template-columns: 1fr;
-            gap: 10px;
-          }
+        /* 3.5s Progress Bar */
+        .aq-toast-progress-track {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: rgba(255, 255, 255, 0.08);
+        }
+        .aq-toast-progress-bar {
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(90deg, #00e5c4, #00f2fe);
+          transform-origin: left center;
+          animation: aqProgressAnim 3.5s linear forwards;
+        }
+        @keyframes aqProgressAnim {
+          from { transform: scaleX(1); }
+          to { transform: scaleX(0); }
         }
       `;
       document.head.appendChild(styles);
     }
 
-    // 3. Remove any existing backdrop
-    const oldBackdrop = document.querySelector(".aq-modal-backdrop");
-    if (oldBackdrop) oldBackdrop.remove();
+    // 3. Create or find Toast Wrapper
+    let wrapper = document.querySelector(".aq-toast-wrapper");
+    if (!wrapper) {
+      wrapper = document.createElement("div");
+      wrapper.className = "aq-toast-wrapper";
+      document.body.appendChild(wrapper);
+    }
 
     // 4. Build customized WhatsApp direct link
     const waText = encodeURIComponent(
@@ -1009,142 +948,83 @@
     );
     const waUrl = `https://wa.me/923161893004?text=${waText}`;
 
-    // 5. Create DOM elements
-    const backdrop = document.createElement("div");
-    backdrop.className = "aq-modal-backdrop";
-    backdrop.setAttribute("role", "dialog");
-    backdrop.setAttribute("aria-modal", "true");
-    backdrop.setAttribute("aria-label", "Message Delivered Successfully");
-
-    backdrop.innerHTML = `
-      <canvas class="aq-confetti-canvas"></canvas>
-      <div class="aq-modal-card">
-        <button class="aq-modal-close" aria-label="Close modal">&times;</button>
-
-        <div class="aq-icon-wrapper">
-          <div class="aq-icon-ring"></div>
-          <div class="aq-icon-circle">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-        </div>
-
-        <div class="aq-status-badge">
-          <span class="aq-dot-glow aq-status-dot"></span>
+    // 5. Create Toast Card
+    const toast = document.createElement("div");
+    toast.className = "aq-toast-card";
+    toast.innerHTML = `
+      <div class="aq-toast-header">
+        <div class="aq-toast-badge">
+          <span class="aq-toast-badge-dot"></span>
           <span>Transmission Secured</span>
         </div>
+        <button class="aq-toast-close" aria-label="Close">&times;</button>
+      </div>
 
-        <h3 class="aq-modal-title">Message Sent Successfully!</h3>
-        <p class="aq-modal-desc">
-          Thank you, <strong>${safeName}</strong>! Your inquiry has been encrypted and delivered directly to Engr. Ahmed Aqeel's primary inbox.
-        </p>
-
-        <div class="aq-info-box">
-          <div class="aq-info-item">
-            <span class="aq-info-icon">⚡</span>
-            <div>
-              <div class="aq-info-label">Expected Response</div>
-              <div class="aq-info-val">Within Minutes ⚡</div>
-            </div>
-          </div>
-          <div class="aq-info-item">
-            <span class="aq-info-icon">📩</span>
-            <div>
-              <div class="aq-info-label">Direct Inbox</div>
-              <div class="aq-info-val">engrahmedaqeel14@gmail.com</div>
-            </div>
+      <div class="aq-toast-body">
+        <div class="aq-toast-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <div class="aq-toast-text">
+          <h4 class="aq-toast-title">Message Sent Successfully!</h4>
+          <p class="aq-toast-desc">
+            Thank you, <strong>${safeName}</strong>! Your inquiry is delivered directly to Engr. Ahmed Aqeel.
+          </p>
+          <div class="aq-toast-subinfo">
+            <div>⚡ Response: <span>Within Minutes</span></div>
           </div>
         </div>
+      </div>
 
-        <div class="aq-modal-actions">
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="aq-btn-wa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.953 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.463.132-.613.136-.134.301-.351.452-.527.15-.175.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.238-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.718.311 1.28.497 1.718.636.723.23 1.38.197 1.901.12.58-.087 1.782-.728 2.033-1.432.251-.703.251-1.306.176-1.432-.076-.126-.276-.201-.578-.352zM12.04 2C6.516 2 2.028 6.488 2.028 12.012c0 1.94.557 3.748 1.517 5.275L2 22l4.87-1.493a9.98 9.98 0 0 0 5.17 1.433h.005c5.522 0 10.01-4.488 10.01-10.012 0-2.677-1.042-5.195-2.934-7.087A9.954 9.954 0 0 0 12.04 2z"/>
-            </svg>
-            Chat Instantly on WhatsApp &rarr;
-          </a>
-          <button class="aq-btn-close">Done &bull; Return to Portfolio</button>
-        </div>
+      <div class="aq-toast-actions">
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="aq-toast-wa-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.953 1.18-.176.2-.351.226-.653.076-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.463.132-.613.136-.134.301-.351.452-.527.15-.175.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.678-1.633-.929-2.238-.244-.59-.493-.51-.678-.52l-.578-.01c-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.718.311 1.28.497 1.718.636.723.23 1.38.197 1.901.12.58-.087 1.782-.728 2.033-1.432.251-.703.251-1.306.176-1.432-.076-.126-.276-.201-.578-.352zM12.04 2C6.516 2 2.028 6.488 2.028 12.012c0 1.94.557 3.748 1.517 5.275L2 22l4.87-1.493a9.98 9.98 0 0 0 5.17 1.433h.005c5.522 0 10.01-4.488 10.01-10.012 0-2.677-1.042-5.195-2.934-7.087A9.954 9.954 0 0 0 12.04 2z"/>
+          </svg>
+          WhatsApp Direct &rarr;
+        </a>
+        <button class="aq-toast-dismiss-btn">Dismiss</button>
+      </div>
+
+      <div class="aq-toast-progress-track">
+        <div class="aq-toast-progress-bar"></div>
       </div>
     `;
 
-    document.body.appendChild(backdrop);
+    wrapper.appendChild(toast);
 
-    // 6. Confetti Particle Animation
-    const canvas = backdrop.querySelector(".aq-confetti-canvas");
-    if (canvas) {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      const ctx = canvas.getContext("2d");
-      const particles = [];
-      const colors = ["#00e5c4", "#00f2fe", "#38bdf8", "#818cf8", "#34d399", "#fbbf24", "#ffffff"];
-
-      for (let i = 0; i < 65; i++) {
-        particles.push({
-          x: canvas.width / 2 + (Math.random() - 0.5) * 80,
-          y: canvas.height / 2 + (Math.random() - 0.5) * 60,
-          vx: (Math.random() - 0.5) * 14,
-          vy: (Math.random() - 0.85) * 16 - 3,
-          size: Math.random() * 6 + 3,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          rotation: Math.random() * 360,
-          rotSpeed: (Math.random() - 0.5) * 10,
-          gravity: 0.45,
-          opacity: 1,
-          decay: Math.random() * 0.015 + 0.012
-        });
-      }
-
-      let animId;
-      const renderParticles = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let alive = false;
-        particles.forEach(p => {
-          if (p.opacity > 0) {
-            alive = true;
-            p.x += p.vx;
-            p.y += p.vy;
-            p.vy += p.gravity;
-            p.rotation += p.rotSpeed;
-            p.opacity -= p.decay;
-
-            ctx.save();
-            ctx.translate(p.x, p.y);
-            ctx.rotate((p.rotation * Math.PI) / 180);
-            ctx.fillStyle = p.color;
-            ctx.globalAlpha = Math.max(0, p.opacity);
-            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 1.5);
-            ctx.restore();
-          }
-        });
-        if (alive) animId = requestAnimationFrame(renderParticles);
-      };
-      renderParticles();
-    }
-
-    // 7. Open Animation
+    // 6. Slide In
     requestAnimationFrame(() => {
-      backdrop.classList.add("is-active");
+      toast.classList.add("is-visible");
     });
 
-    // 8. Close Handler
-    const closeModal = () => {
-      backdrop.classList.remove("is-active");
-      setTimeout(() => backdrop.remove(), 350);
-      document.removeEventListener("keydown", escHandler);
+    // 7. Auto-dismiss after 3.5 seconds
+    let dismissTimeout = setTimeout(() => {
+      closeToast();
+    }, 3500);
+
+    const closeToast = () => {
+      clearTimeout(dismissTimeout);
+      toast.classList.remove("is-visible");
+      setTimeout(() => toast.remove(), 380);
     };
 
-    const escHandler = (e) => {
-      if (e.key === "Escape") closeModal();
-    };
-
-    document.addEventListener("keydown", escHandler);
-    backdrop.querySelector(".aq-modal-close").addEventListener("click", closeModal);
-    backdrop.querySelector(".aq-btn-close").addEventListener("click", closeModal);
-    backdrop.addEventListener("click", (e) => {
-      if (e.target === backdrop) closeModal();
+    // Pause on hover
+    toast.addEventListener("mouseenter", () => {
+      const bar = toast.querySelector(".aq-toast-progress-bar");
+      if (bar) bar.style.animationPlayState = "paused";
+      clearTimeout(dismissTimeout);
     });
+
+    toast.addEventListener("mouseleave", () => {
+      const bar = toast.querySelector(".aq-toast-progress-bar");
+      if (bar) bar.style.animationPlayState = "running";
+      dismissTimeout = setTimeout(closeToast, 2000);
+    });
+
+    toast.querySelector(".aq-toast-close").addEventListener("click", closeToast);
+    toast.querySelector(".aq-toast-dismiss-btn").addEventListener("click", closeToast);
   }
 
   /* ──────────────────────────────────────────────────────────
