@@ -304,17 +304,18 @@
        &bull; Design     : Figma, Photoshop, Illustrator, Premiere Pro`,
     projects:
       `<span class="term-highlight">Featured Projects (12 Active Repos)</span><br>
+       &bull; <b>Devorbittech</b> — Enterprise AI Platform (devorbittech.org)<br>
+       &bull; <b>Blissful Blinds Ltd</b> — E-Commerce Business Platform<br>
        &bull; <b>Engr. Ahmed Aqeel Blog</b> — Next.js 13 / Engineering & Tech Blog<br>
        &bull; <b>StudentNotes App</b> — React Native / Offline Scanner & PDF Studio<br>
+       &bull; <b>Organization Finance</b> — TypeScript / Mobile Budgeting App<br>
+       &bull; <b>MediReport AI</b> — Python / Expo / OCR Biomarker Analyzer<br>
        &bull; <b>BlindMatch UK</b> — Next.js 15 / Supabase / Blinds Marketplace<br>
        &bull; <b>Restaurant Menu System</b> — Real-time WebSocket / Signage SaaS<br>
-       &bull; <b>MediReport AI</b> — Python / Expo / OCR Biomarker Analyzer<br>
-       &bull; <b>Devorbittech</b> — Enterprise Platform (devorbittech.org)<br>
-       &bull; <b>Blissful Blinds Ltd</b> — E-Commerce Business Platform<br>
        &bull; <b>Bright Mind Academy</b> — Cognitive Learning & Quizzes<br>
        &bull; <b>Python AI Suite</b> — NLP Chatbots & Task Automation<br>
        &bull; <b>Devsync AI</b> — Real-time AI Synchronization Assistant<br>
-       &bull; <b>Organization Finance</b> — TypeScript / Mobile Budgeting`,
+       &bull; <b>Ahmed Aqeel Portfolio</b> — 3D Developer Platform (ahmedaqeeldev.com)`,
     contact:
       `<span class="term-highlight">Contact</span><br>
        &bull; Email     : engrahmedaqeel14@gmail.com<br>

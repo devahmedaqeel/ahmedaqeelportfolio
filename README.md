@@ -46,17 +46,17 @@ Welcome to the official repository for **Ahmed Aqeel's** production AI Full-Stac
 
 ## 🚀 Featured Production Projects & Repositories
 
-1. **Engr. Ahmed Aqeel Blog** ([Live Demo](https://engr-ahmed-aqeel-blog.vercel.app) · [GitHub](https://github.com/devahmedaqeel/EngrAhmedAqeelBlog)) — Production-grade Next.js 13 SSG Engineering Portfolio & Technical Blog with 3D parallax tilt, RSS 2.0 / JSON feeds, and instant search.
-2. **StudentNotes App** ([GitHub](https://github.com/devahmedaqeel/studentnotesapp)) — Offline-first React Native & Expo SDK 54 student ecosystem with document camera scanning, 4-corner quad cropping, built-in PDF studio, and academic vault.
-3. **BlindMatch UK** ([Live Demo](https://blindmatch-uk.vercel.app) · [GitHub](https://github.com/devahmedaqeel/Blindmatch-uk-)) — Next.js 15 & Supabase SaaS lead generation & blind fitters marketplace with a 4-step quote wizard and Paddle subscriptions.
-4. **Restaurant Digital Menu System (Menucast)** ([GitHub](https://github.com/devahmedaqeel/Restaurant-Digital-Menu-System)) — Real-time cloud digital signage & restaurant menu platform with TV/tablet display apps and WebSocket sync.
-5. **MediReport AI** ([GitHub](https://github.com/devahmedaqeel/medireport-ai)) — AI-powered medical report analyzer app with FastAPI, PaddleOCR, and Supabase.
-6. **Devorbittech** ([Live Demo](https://devorbittech.org/) · [GitHub](https://github.com/devahmedaqeel/devorbittech)) — Official enterprise web platform for Dev Orbit Tech.
-7. **Blissful Blinds Ltd** ([Live Demo](https://blissfulblindsltd.vercel.app/) · [GitHub](https://github.com/devahmedaqeel/blissfulblindsltd)) — E-Commerce business website.
-8. **Bright Mind Academy** ([GitHub](https://github.com/devahmedaqeel/Bright-Mind)) — Interactive cognitive learning & quiz challenge web application.
-9. **Python AI & Automation Suite** ([GitHub](https://github.com/devahmedaqeel/CodeAlpha_Project_Basic-Chatbot-)) — Suite of rule-based NLP chatbots and task automation tools.
-10. **Devsync AI** ([GitHub](https://github.com/devahmedaqeel/devsync-ai)) — Real-time AI synchronization and workflow automation assistant.
-11. **Organization Finance Management** ([GitHub](https://github.com/devahmedaqeel/Organization-Finance-Management)) — Mobile finance budgeting & expense tracking application.
+1. **Devorbittech** ([Live Demo](https://devorbittech.org/) · [GitHub](https://github.com/devahmedaqeel/devorbittech)) — Official enterprise web platform for Dev Orbit Tech.
+2. **Blissful Blinds Ltd** ([Live Demo](https://blissfulblindsltd.vercel.app/) · [GitHub](https://github.com/devahmedaqeel/blissfulblindsltd)) — E-Commerce business website.
+3. **Engr. Ahmed Aqeel Blog** ([Live Demo](https://engr-ahmed-aqeel-blog.vercel.app) · [GitHub](https://github.com/devahmedaqeel/EngrAhmedAqeelBlog)) — Production-grade Next.js 13 SSG Engineering Portfolio & Technical Blog with 3D parallax tilt, RSS 2.0 / JSON feeds, and instant search.
+4. **StudentNotes App** ([GitHub](https://github.com/devahmedaqeel/studentnotesapp)) — Offline-first React Native & Expo SDK 54 student ecosystem with document camera scanning, 4-corner quad cropping, built-in PDF studio, and academic vault.
+5. **Organization Finance Management** ([GitHub](https://github.com/devahmedaqeel/Organization-Finance-Management)) — Mobile finance budgeting & expense tracking application.
+6. **MediReport AI** ([GitHub](https://github.com/devahmedaqeel/medireport-ai)) — AI-powered medical report analyzer app with FastAPI, PaddleOCR, and Supabase.
+7. **BlindMatch UK** ([Live Demo](https://blindmatch-uk.vercel.app) · [GitHub](https://github.com/devahmedaqeel/Blindmatch-uk-)) — Next.js 15 & Supabase SaaS lead generation & blind fitters marketplace with a 4-step quote wizard and Paddle subscriptions.
+8. **Restaurant Digital Menu System (Menucast)** ([GitHub](https://github.com/devahmedaqeel/Restaurant-Digital-Menu-System)) — Real-time cloud digital signage & restaurant menu platform with TV/tablet display apps and WebSocket sync.
+9. **Bright Mind Academy** ([GitHub](https://github.com/devahmedaqeel/Bright-Mind)) — Interactive cognitive learning & quiz challenge web application.
+10. **Python AI & Automation Suite** ([GitHub](https://github.com/devahmedaqeel/CodeAlpha_Project_Basic-Chatbot-)) — Suite of rule-based NLP chatbots and task automation tools.
+11. **Devsync AI** ([GitHub](https://github.com/devahmedaqeel/devsync-ai)) — Real-time AI synchronization and workflow automation assistant.
 12. **Ahmed Aqeel Portfolio** ([Live Demo](https://ahmedaqeeldev.com) · [GitHub](https://github.com/devahmedaqeel/ahmedaqeelportfolio)) — 3D interactive personal portfolio platform.
 
 ---
