@@ -1045,7 +1045,7 @@
             <span class="aq-info-icon">⚡</span>
             <div>
               <div class="aq-info-label">Expected Response</div>
-              <div class="aq-info-val">Within 2–4 Hours</div>
+              <div class="aq-info-val">Within Minutes ⚡</div>
             </div>
           </div>
           <div class="aq-info-item">
