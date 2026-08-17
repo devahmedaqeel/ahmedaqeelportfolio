@@ -303,11 +303,18 @@
        &bull; Deploy     : Vercel, Netlify, Docker<br>
        &bull; Design     : Figma, Photoshop, Illustrator, Premiere Pro`,
     projects:
-      `<span class="term-highlight">Featured Projects</span><br>
-       1. portfolio-pro — Web Template<br>
-       2. Organization Finance — TypeScript / React<br>
-       3. react-native-auth-ui — Mobile UI<br>
-       4. Basic Chatbot — Python / NLP`,
+      `<span class="term-highlight">Featured Projects (12 Active Repos)</span><br>
+       &bull; <b>Engr. Ahmed Aqeel Blog</b> — Next.js 13 / Engineering & Tech Blog<br>
+       &bull; <b>StudentNotes App</b> — React Native / Offline Scanner & PDF Studio<br>
+       &bull; <b>BlindMatch UK</b> — Next.js 15 / Supabase / Blinds Marketplace<br>
+       &bull; <b>Restaurant Menu System</b> — Real-time WebSocket / Signage SaaS<br>
+       &bull; <b>MediReport AI</b> — Python / Expo / OCR Biomarker Analyzer<br>
+       &bull; <b>Devorbittech</b> — Enterprise Platform (devorbittech.org)<br>
+       &bull; <b>Blissful Blinds Ltd</b> — E-Commerce Business Platform<br>
+       &bull; <b>Bright Mind Academy</b> — Cognitive Learning & Quizzes<br>
+       &bull; <b>Python AI Suite</b> — NLP Chatbots & Task Automation<br>
+       &bull; <b>Devsync AI</b> — Real-time AI Synchronization Assistant<br>
+       &bull; <b>Organization Finance</b> — TypeScript / Mobile Budgeting`,
     contact:
       `<span class="term-highlight">Contact</span><br>
        &bull; Email     : engrahmedaqeel14@gmail.com<br>
@@ -1128,6 +1135,41 @@
   // Initialize theme controller immediately & on DOMContentLoaded
   initThemeController();
   document.addEventListener("DOMContentLoaded", initThemeController);
+
+  /* ──────────────────────────────────────────────────────────
+     PROJECT CATEGORY FILTER CONTROLLER
+  ──────────────────────────────────────────────────────────── */
+  function initProjectFilters() {
+    const filterButtons = $$(".project-filter-btn");
+    const projectCards = $$(".projects-grid .project-card");
+    if (!filterButtons.length || !projectCards.length) return;
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+        if (!filter) return;
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        projectCards.forEach((card) => {
+          const category = card.getAttribute("data-category") || "web";
+          if (filter === "all" || category.includes(filter)) {
+            card.classList.remove("filter-hidden");
+            card.classList.remove("filter-anim");
+            void card.offsetWidth;
+            card.classList.add("filter-anim");
+          } else {
+            card.classList.add("filter-hidden");
+            card.classList.remove("filter-anim");
+          }
+        });
+      });
+    });
+  }
+
+  initProjectFilters();
+  document.addEventListener("DOMContentLoaded", initProjectFilters);
 
 })();
 

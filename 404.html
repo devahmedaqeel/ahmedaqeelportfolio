@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="404 - Page Not Found | Ahmed Aqeel - AI Full Stack Developer Portfolio" />
+  <meta name="robots" content="noindex, follow" />
+  <title>404 - Page Not Found | Ahmed Aqeel</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23070b12'/%3E%3Ctext x='50' y='68' font-size='56' font-family='Arial,Helvetica,sans-serif' font-weight='800' text-anchor='middle' fill='%2300f2fe'%3E%7B%7D%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@700;800;900&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #020408;
+      --card-bg: rgba(10, 16, 32, 0.85);
+      --accent: #00f2fe;
+      --accent-glow: rgba(0, 242, 254, 0.4);
+      --text: #ffffff;
+      --text-muted: #94a3b8;
+      --border: rgba(0, 242, 254, 0.25);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Background Glow Effects */
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glow-1 {
+      width: 320px;
+      height: 320px;
+      background: rgba(0, 242, 254, 0.15);
+      top: 15%;
+      left: 20%;
+    }
+    .glow-2 {
+      width: 280px;
+      height: 280px;
+      background: rgba(0, 229, 196, 0.12);
+      bottom: 15%;
+      right: 20%;
+    }
+
+    .error-card {
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid var(--border);
+      border-radius: 28px;
+      padding: 48px 36px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 242, 254, 0.15);
+    }
+    .code-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .error-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(72px, 14vw, 110px);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #ffffff 30%, #00f2fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      letter-spacing: -2px;
+    }
+    .error-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .error-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #00e5c4 0%, #00f2fe 100%);
+      color: #020408;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 25px rgba(0, 242, 254, 0.35);
+    }
+    .home-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(0, 242, 254, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-orb glow-1"></div>
+  <div class="glow-orb glow-2"></div>
+
+  <div class="error-card">
+    <div class="code-badge">
+      <span class="status-dot"></span>
+      <span>404 · Route Not Found</span>
+    </div>
+    
+    <div class="error-num">404</div>
+    <h1 class="error-title">Lost in Cyberspace?</h1>
+    <p class="error-desc">
+      The page or resource you are looking for does not exist, has been relocated, or is temporarily offline.
+    </p>
+
+    <a href="/" class="home-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      Return to Home
+    </a>
+  </div>
+
+</body>
+</html>

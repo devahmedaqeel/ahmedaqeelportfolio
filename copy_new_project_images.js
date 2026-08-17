@@ -8,7 +8,7 @@ if (!fs.existsSync(destDir)) {
   fs.mkdirSync(destDir, { recursive: true });
 }
 
-const filesMap = {
+const map = {
   'blog_preview_1786963991687.jpg': 'engrahmedaqeel-blog-preview.jpg',
   'studentnotes_preview_1786964013421.jpg': 'studentnotesapp-preview.jpg',
   'blindmatch_preview_1786964037318.jpg': 'blindmatch-uk-preview.jpg',
@@ -17,11 +17,13 @@ const filesMap = {
   'automation_preview_1786964235546.jpg': 'python-automation-preview.jpg'
 };
 
-Object.entries(filesMap).forEach(([srcFile, destFile]) => {
+Object.entries(map).forEach(([srcFile, destFile]) => {
   const src = path.join(srcDir, srcFile);
   const dest = path.join(destDir, destFile);
   if (fs.existsSync(src)) {
     fs.copyFileSync(src, dest);
-    console.log(`Successfully synced ${destFile} to images/`);
+    console.log(`Copied ${srcFile} -> ${destFile}`);
+  } else {
+    console.error(`Source not found: ${src}`);
   }
 });

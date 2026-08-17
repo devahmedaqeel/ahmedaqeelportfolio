@@ -68,6 +68,9 @@
         },
         "sameAs": [
           "https://github.com/devahmedaqeel",
+          "https://engr-ahmed-aqeel-blog.vercel.app",
+          "https://blindmatch-uk.vercel.app",
+          "https://devorbittech.org",
           "https://www.linkedin.com/in/ahmed-aqeel-2a0090271/",
           "https://wa.me/923161893004",
           "https://www.facebook.com/share/1LEsJzr6Bi/?mibextid=wwXIfr",
@@ -636,13 +639,145 @@
       <div class="section-header centered">
         <div class="sec-eyebrow"><span class="sec-eyebrow-text">Portfolio</span></div>
         <h2 class="sec-title" id="projects-title">Featured <span class="grad">Projects</span></h2>
-        <p class="sec-sub">A selection of development and design work delivered for clients and personal projects.</p>
+        <p class="sec-sub">A comprehensive showcase of production web apps, mobile applications, AI agents, and technical projects delivered from my GitHub.</p>
+      </div>
+
+      <!-- Project Category Filter Tabs -->
+      <div class="projects-filters" role="tablist" aria-label="Project Categories">
+        <button type="button" class="project-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+          All Projects <span class="project-filter-count">12</span>
+        </button>
+        <button type="button" class="project-filter-btn" data-filter="web" role="tab" aria-selected="false">
+          Web &amp; SaaS <span class="project-filter-count">6</span>
+        </button>
+        <button type="button" class="project-filter-btn" data-filter="mobile" role="tab" aria-selected="false">
+          Mobile Apps <span class="project-filter-count">3</span>
+        </button>
+        <button type="button" class="project-filter-btn" data-filter="ai" role="tab" aria-selected="false">
+          AI &amp; Automation <span class="project-filter-count">3</span>
+        </button>
       </div>
 
       <div class="projects-grid">
 
-        <!-- Project 1: MediReport AI -->
-        <article class="project-card reveal d1" data-project-id="medireport-ai">
+        <!-- Project 1: Engr. Ahmed Aqeel Blog -->
+        <article class="project-card reveal d1" data-project-id="engrahmedaqeel-blog" data-category="web">
+          <div class="project-thumb">
+            <div class="pt-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+            <img src="images/engrahmedaqeel-blog-preview.jpg" alt="Engr. Ahmed Aqeel Blog" onerror="this.style.display='none';" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <p class="project-type">Web · Engineering Blog</p>
+            <h3 class="project-title">Engr. Ahmed Aqeel Blog</h3>
+            <p class="project-desc">Production-grade engineering portfolio &amp; technical blog platform built with Next.js 13 SSG, dynamic 3D mouse parallax tilt physics, automated RSS 2.0 / JSON feeds, and instant search.</p>
+            <div class="project-stack">
+              <span class="project-tech">Next.js 13</span>
+              <span class="project-tech">React 18</span>
+              <span class="project-tech">Tailwind CSS</span>
+              <span class="project-tech">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://engr-ahmed-aqeel-blog.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/devahmedaqeel/EngrAhmedAqeelBlog" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: StudentNotes App -->
+        <article class="project-card reveal d2" data-project-id="studentnotesapp" data-category="mobile">
+          <div class="project-thumb">
+            <div class="pt-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <img src="images/studentnotesapp-preview.jpg" alt="StudentNotes App" onerror="this.style.display='none';" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <p class="project-type">Mobile App · EdTech</p>
+            <h3 class="project-title">StudentNotes App</h3>
+            <p class="project-desc">Offline-first student productivity ecosystem featuring 4-corner document camera scanning, quad cropping, built-in PDF studio, academic vault, deadline reminders, and smart URL cleaner.</p>
+            <div class="project-stack">
+              <span class="project-tech">React Native</span>
+              <span class="project-tech">Expo SDK 54</span>
+              <span class="project-tech">SQLite</span>
+              <span class="project-tech">Supabase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/devahmedaqeel/studentnotesapp" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: BlindMatch UK -->
+        <article class="project-card reveal d3" data-project-id="blindmatch-uk" data-category="web">
+          <div class="project-thumb">
+            <div class="pt-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+            </div>
+            <img src="images/blindmatch-uk-preview.jpg" alt="BlindMatch UK" onerror="this.style.display='none';" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <p class="project-type">Web · SaaS Marketplace</p>
+            <h3 class="project-title">BlindMatch UK</h3>
+            <p class="project-desc">B2B/B2C marketplace connecting UK homeowners with local verified blind fitters featuring a 4-step quote wizard, postcode territory matching, and Paddle subscriptions.</p>
+            <div class="project-stack">
+              <span class="project-tech">Next.js 15</span>
+              <span class="project-tech">TypeScript</span>
+              <span class="project-tech">Supabase</span>
+              <span class="project-tech">Paddle</span>
+            </div>
+            <div class="project-links">
+              <a href="https://blindmatch-uk.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/devahmedaqeel/Blindmatch-uk-" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Restaurant Digital Menu System -->
+        <article class="project-card reveal d4" data-project-id="restaurant-menu" data-category="web">
+          <div class="project-thumb">
+            <div class="pt-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h4M7 11h2"/></svg>
+            </div>
+            <img src="images/restaurant-menu-preview.jpg" alt="Restaurant Digital Menu System" onerror="this.style.display='none';" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <p class="project-type">Full-Stack · SaaS &amp; Signage</p>
+            <h3 class="project-title">Restaurant Digital Menu System</h3>
+            <p class="project-desc">Real-time cloud digital signage &amp; restaurant menu platform with full-screen TV/tablet display app, instant WebSocket live updates, and React management dashboard.</p>
+            <div class="project-stack">
+              <span class="project-tech">React</span>
+              <span class="project-tech">Vite</span>
+              <span class="project-tech">Expo</span>
+              <span class="project-tech">WebSockets</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/devahmedaqeel/Restaurant-Digital-Menu-System" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: MediReport AI -->
+        <article class="project-card reveal d1" data-project-id="medireport-ai" data-category="ai">
           <div class="project-thumb">
             <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
             <img src="images/medireport-ai-preview.png" alt="Medireport AI" onerror="this.style.display='none';" loading="lazy" />
@@ -666,8 +801,8 @@
           </div>
         </article>
 
-        <!-- Project 2: Devorbittech -->
-        <article class="project-card reveal d2">
+        <!-- Project 6: Devorbittech -->
+        <article class="project-card reveal d2" data-project-id="devorbittech" data-category="web">
           <div class="project-thumb">
             <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
             <img src="images/devorbittech-platform-preview.png" alt="Devorbittech" onerror="this.style.display='none';" loading="lazy" />
@@ -675,7 +810,7 @@
           <div class="project-body">
             <p class="project-type">Web · AI Enterprise</p>
             <h3 class="project-title">Devorbittech</h3>
-            <p class="project-desc">Official enterprise web platform for Dev Orbit Tech — AI Solutions, Custom Web Apps, Mobile Apps, SaaS Development & Mentorship.</p>
+            <p class="project-desc">Official enterprise web platform for Dev Orbit Tech — AI Solutions, Custom Web Apps, Mobile Apps, SaaS Development &amp; Mentorship.</p>
             <div class="project-stack">
               <span class="project-tech">HTML5</span>
               <span class="project-tech">CSS3</span>
@@ -695,8 +830,8 @@
           </div>
         </article>
 
-        <!-- Project 3: Blissfulblindsltd -->
-        <article class="project-card reveal d3" data-project-id="blissfulblindsltd">
+        <!-- Project 7: Blissfulblindsltd -->
+        <article class="project-card reveal d3" data-project-id="blissfulblindsltd" data-category="web">
           <div class="project-thumb">
             <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
             <img src="images/blissfulblinds-preview.png" alt="Blissfulblindsltd" onerror="this.style.display='none';" loading="lazy" />
@@ -724,28 +859,26 @@
           </div>
         </article>
 
-        <!-- Project 4: Ahmedaqeelportfolio -->
-        <article class="project-card reveal d4">
+        <!-- Project 8: Bright Mind Academy -->
+        <article class="project-card reveal d4" data-project-id="bright-mind" data-category="web">
           <div class="project-thumb">
-            <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-            <img src="images/portfolio-banner-preview.png" alt="Ahmedaqeelportfolio" onerror="this.style.display='none';" loading="lazy" />
+            <div class="pt-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <img src="images/bright-mind-preview.jpg" alt="Bright Mind Academy" onerror="this.style.display='none';" loading="lazy" />
           </div>
           <div class="project-body">
-            <p class="project-type">Web · Portfolio</p>
-            <h3 class="project-title">Ahmedaqeelportfolio</h3>
-            <p class="project-desc">Personal developer portfolio website showcasing AI engineering, custom web apps, mobile solutions, and FYP student mentorship.</p>
+            <p class="project-type">Web · Interactive Learning</p>
+            <h3 class="project-title">Bright Mind Academy</h3>
+            <p class="project-desc">Interactive cognitive learning &amp; brain-training platform featuring gamified logic challenges, knowledge quizzes, student progress analytics, and responsive UI.</p>
             <div class="project-stack">
-              <span class="project-tech">HTML5</span>
-              <span class="project-tech">CSS3</span>
-              <span class="project-tech">JS</span>
-              <span class="project-tech">Canvas 3D</span>
+              <span class="project-tech">TypeScript</span>
+              <span class="project-tech">React</span>
+              <span class="project-tech">Tailwind CSS</span>
+              <span class="project-tech">Vite</span>
             </div>
             <div class="project-links">
-              <a href="https://ahmedaqeeldev.com" target="_blank" rel="noopener noreferrer" class="proj-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
-              <a href="https://github.com/devahmedaqeel/ahmedaqeelportfolio" target="_blank" rel="noopener noreferrer" class="proj-link">
+              <a href="https://github.com/devahmedaqeel/Bright-Mind" target="_blank" rel="noopener noreferrer" class="proj-link">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 GitHub
               </a>
@@ -753,8 +886,35 @@
           </div>
         </article>
 
-        <!-- Project 5: Devsync Ai -->
-        <article class="project-card reveal d1" data-project-id="devsync-ai">
+        <!-- Project 9: Python AI & Automation Suite -->
+        <article class="project-card reveal d1" data-project-id="python-automation" data-category="ai">
+          <div class="project-thumb">
+            <div class="pt-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <img src="images/python-automation-preview.jpg" alt="Python AI &amp; Automation Suite" onerror="this.style.display='none';" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <p class="project-type">AI · Python Scripts</p>
+            <h3 class="project-title">Python AI &amp; Automation Suite</h3>
+            <p class="project-desc">Intelligent suite of Python tools featuring rule-based NLP chatbots, automated file &amp; workflow scripts, web automation pipelines, and interactive algorithmic games.</p>
+            <div class="project-stack">
+              <span class="project-tech">Python 3</span>
+              <span class="project-tech">NLP</span>
+              <span class="project-tech">Automation</span>
+              <span class="project-tech">Algorithms</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/devahmedaqeel/CodeAlpha_Project_Basic-Chatbot-" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 10: Devsync Ai -->
+        <article class="project-card reveal d2" data-project-id="devsync-ai" data-category="ai">
           <div class="project-thumb">
             <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <img src="images/devsync-ai-preview.png" alt="Devsync Ai" onerror="this.style.display='none';" loading="lazy" />
@@ -777,8 +937,8 @@
           </div>
         </article>
 
-        <!-- Project 6: Organization Finance Management -->
-        <article class="project-card reveal d2">
+        <!-- Project 11: Organization Finance Management -->
+        <article class="project-card reveal d3" data-project-id="org-finance" data-category="mobile">
           <div class="project-thumb">
             <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
             <img src="images/ofm-preview.png" alt="Organization Finance Management" onerror="this.style.display='none';" loading="lazy" />
@@ -794,6 +954,35 @@
             </div>
             <div class="project-links">
               <a href="https://github.com/devahmedaqeel/Organization-Finance-Management" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 12: Ahmedaqeelportfolio -->
+        <article class="project-card reveal d4" data-project-id="portfolio" data-category="web">
+          <div class="project-thumb">
+            <div class="pt-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <img src="images/portfolio-banner-preview.png" alt="Ahmedaqeelportfolio" onerror="this.style.display='none';" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <p class="project-type">Web · Portfolio</p>
+            <h3 class="project-title">Ahmedaqeelportfolio</h3>
+            <p class="project-desc">Personal developer portfolio website showcasing AI engineering, custom web apps, mobile solutions, and FYP student mentorship.</p>
+            <div class="project-stack">
+              <span class="project-tech">HTML5</span>
+              <span class="project-tech">CSS3</span>
+              <span class="project-tech">JS</span>
+              <span class="project-tech">Canvas 3D</span>
+            </div>
+            <div class="project-links">
+              <a href="https://ahmedaqeeldev.com" target="_blank" rel="noopener noreferrer" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/devahmedaqeel/ahmedaqeelportfolio" target="_blank" rel="noopener noreferrer" class="proj-link">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right:4px; vertical-align:middle;" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 GitHub
               </a>
@@ -1135,8 +1324,13 @@
 
     <div class="footer-bottom-bar">
       <div class="footer-bottom-inner">
-        <p>© 2026 Ahmed Aqeel. All rights reserved.</p>
-        <p>Built with ❤️ · Pakistan</p>
+        <p>© 2026 Engr. Ahmed Aqeel. All rights reserved.</p>
+        <div style="display: flex; gap: 16px; font-size: 13px;">
+          <a href="#privacy" onclick="alert('Privacy Notice: This portfolio website respects your privacy. Information submitted through the contact form is used strictly to communicate regarding requested software engineering, app development, or AI automation projects. No data is shared with third parties.'); return false;" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a>
+          <span style="color: rgba(255,255,255,0.2);">·</span>
+          <a href="#terms" onclick="alert('Terms of Service: All code samples, project demonstrations, and UI designs featured on this portfolio are intellectual property of Engr. Ahmed Aqeel or respective project clients.'); return false;" style="color: #94a3b8; text-decoration: none;">Terms of Service</a>
+        </div>
+        <p>Built with ❤️ · Kotli, AJK, Pakistan</p>
       </div>
     </div>
   </footer>
