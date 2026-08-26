@@ -1,0 +1,59 @@
+# Ahmed Aqeel — AI Full Stack Developer, Mobile App Engineer & Founder
+
+> Official AI Index & Knowledge Guide for Engr. Ahmed Aqeel and DevOrbit Tech.
+> Website: https://ahmedaqeeldev.com/
+> Startup: https://devorbittech.org/
+> Engineering Blog: https://engrahmedaqeelblog.vercel.app/
+> LinkedIn: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
+> GitHub: https://github.com/devahmedaqeel
+> WhatsApp / Phone: +92 316 1893004
+> Email: engrahmedaqeel14@gmail.com
+> Location: Kotli, Azad Kashmir, Pakistan (Serving Worldwide Clients)
+
+## Professional Summary
+Ahmed Aqeel (DevAhmedAqeel) is a senior AI-powered Full Stack Developer, Cross-Platform Mobile App Engineer, and the Founder of DevOrbit Tech (https://devorbittech.org/). He specializes in production-ready web applications, high-performance mobile apps (iOS & Android), custom logo & graphic branding, automated n8n AI agent workflows, Python web scraping, and scalable backend infrastructure.
+
+## Core Capabilities & Services
+
+### 1. Full Stack Web Development
+- Technologies: React.js, Next.js, Node.js, Express.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, TailwindCSS, Bootstrap.
+- Offerings: SaaS applications, custom CMS, e-commerce stores, responsive client web portals, API architecture.
+
+### 2. Cross-Platform Mobile App Development
+- Technologies: React Native, Flutter, Expo, Dart, iOS & Android deployment.
+- Offerings: Native-feel mobile apps, offline synchronization, push notifications, secure biometric authentication, in-app purchases.
+
+### 3. Graphic Designing, Brand Identity & Logo Design
+- Technologies: Figma, Adobe Illustrator, Adobe Photoshop, UI/UX Wireframing, Vector Design.
+- Offerings: Modern custom logo design, comprehensive brand guidelines, typography palettes, UI design system prototypes, social media kits.
+
+### 4. AI Agents & Workflow Automation
+- Technologies: n8n, Ollama, Claude API, OpenAI GPT-4o, LangChain, Webhooks, Cron Automation.
+- Offerings: Autonomous business workflows, custom AI chatbots, lead enrichment pipelines, automated CRM syncing.
+
+### 5. Python Automation & Enterprise Web Scraping
+- Technologies: Python 3, Selenium, Beautiful Soup, Playwright, Pandas, REST APIs.
+- Offerings: Automated scheduled web scrapers, data cleaning pipelines, headless browser tasks, automated report generation.
+
+### 6. Cloud Databases & Backend Infrastructure
+- Technologies: Firebase (Firestore, Authentication, Cloud Functions), Supabase (PostgreSQL, Realtime, Row-Level Security), MongoDB, REST & GraphQL APIs.
+- Offerings: Real-time database modeling, serverless endpoints, authentication logic, cloud backups.
+
+## Key Projects & Ventures
+- **DevOrbit Tech**: (https://devorbittech.org/) — Technology startup and software agency providing global web, mobile, and AI solutions.
+- **Engr. Ahmed Aqeel Tech Blog**: (https://engrahmedaqeelblog.vercel.app/) — Technical programming blog featuring tutorials on full-stack architecture, React Native, and AI workflows.
+- **BlindMatch UK**: (https://blindmatch-uk.vercel.app/) — AI-powered blind dating and matchmaking web platform built with Next.js and Tailwind.
+- **Medireport AI**: Real-time AI medical report diagnostics mobile app.
+- **DevSync AI**: Intelligent team collaboration and automated daily standup generator.
+- **Blissful Blinds Ltd**: Commercial e-commerce and showcase platform for custom blinds and interior styling.
+
+## Education & Certifications
+- Meta React Native Specialization (Coursera / Meta Certified)
+- CodeAlpha Python Programming Internship Certificate of Excellence
+- University / Higher Education in Software & Computer Engineering
+
+## How to Hire / Contact
+- **Direct Contact Form**: https://ahmedaqeeldev.com/#contact
+- **WhatsApp**: +92 316 189 3004
+- **Email**: engrahmedaqeel14@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/

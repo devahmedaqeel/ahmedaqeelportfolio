@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /llms.txt
 
 # Dedicated AI Search Engine Crawlers & LLM Indexers
 User-agent: Google-Extended

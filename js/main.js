@@ -499,12 +499,12 @@
         // 2. Dispatch to backend API and FormSubmit backup in background
         const serviceMap = {
           web: "Full Stack Web Development (React / Next.js / Node.js)",
-          mobile: "React Native / Mobile App Development",
-          ai: "AI Agent & Workflow Automation",
-          firebase: "Firebase / Supabase Backend Architecture",
+          mobile: "React Native / Mobile App Development (iOS & Android)",
+          design: "Graphic Designing, Brand Identity & Custom Logo Design",
+          ai: "AI Agent & n8n Workflow Automation",
+          firebase: "Firebase / Supabase Cloud Backend Architecture",
           python: "Python Automation, Scripting & Scraping",
-          design: "Frontend UI/UX & Responsive Web Design",
-          other: "Custom Engineering / Consultation Project"
+          other: "Startup Collaboration / Custom Engineering Project"
         };
         const serviceLabel = serviceMap[service] || service || "General Project Inquiry";
         const nowFormatted = new Date().toLocaleString('en-US', {
