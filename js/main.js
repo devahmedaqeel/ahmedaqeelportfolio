@@ -497,24 +497,44 @@
         }
 
         // 2. Dispatch to backend API and FormSubmit backup in background
+        const serviceMap = {
+          web: "Full Stack Web Development (React / Next.js / Node.js)",
+          mobile: "React Native / Mobile App Development",
+          ai: "AI Agent & Workflow Automation",
+          firebase: "Firebase / Supabase Backend Architecture",
+          python: "Python Automation, Scripting & Scraping",
+          design: "Frontend UI/UX & Responsive Web Design",
+          other: "Custom Engineering / Consultation Project"
+        };
+        const serviceLabel = serviceMap[service] || service || "General Project Inquiry";
+        const nowFormatted = new Date().toLocaleString('en-US', {
+          dateStyle: 'medium',
+          timeStyle: 'short'
+        });
+
         try {
           fetch('/api/submit-contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, phone, service, budget, message, website })
+            body: JSON.stringify({ name, email, phone, service: serviceLabel, budget, message, website })
           }).catch((e) => console.log("SMTP API background dispatch:", e));
 
           fetch('https://formsubmit.co/ajax/engrahmedaqeel14@gmail.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify({
-              name,
-              email,
-              phone,
-              service,
-              budget,
-              message,
-              _subject: 'Ahmed Aqeel Portfolio Form - Direct Submission'
+              "👤 Client Name": name,
+              "📧 Email Address": email,
+              "📞 WhatsApp / Phone": phone || "Not provided",
+              "🛠️ Requested Service": serviceLabel,
+              "💰 Budget Range": budget || "Flexible / Not specified",
+              "📝 Project Requirements & Message": message || "No additional message",
+              "🗓️ Submitted On": nowFormatted,
+              "_subject": `💼 New Client Inquiry: ${name} (${serviceLabel}) - Ahmed Aqeel Portfolio`,
+              "_replyto": email,
+              "_template": "table",
+              "_captcha": "false",
+              "_autoresponse": `Hi ${name},\n\nThank you for contacting Engr. Ahmed Aqeel through the portfolio website (https://ahmedaqeeldev.com)!\n\nYour project inquiry regarding "${serviceLabel}" has been received successfully.\n\n📌 Summary of your inquiry:\n• Service: ${serviceLabel}\n• Budget: ${budget || "Flexible"}\n• Message: "${message}"\n\nI will review your requirements and get back to you promptly (typically within a few minutes).\n\nIf you would like to discuss immediately, you can also reach me on WhatsApp:\n📱 WhatsApp: +92 316 189 3004\n✉️ Email: engrahmedaqeel14@gmail.com\n🌐 Website: https://ahmedaqeeldev.com\n\nBest regards,\nEngr. Ahmed Aqeel\nFull Stack AI Developer & Software Engineer`
             })
           }).catch((e) => console.log("FormSubmit fallback background dispatch:", e));
         } catch (dispatchErr) {
@@ -672,12 +692,15 @@
   }
 
   /* ──────────────────────────────────────────────────────────
-     SLEEK NON-INTRUSIVE FLOATING POPUP NOTIFICATION (AUTO-CLOSES IN 3.5s)
+     SLEEK HIGH-VISIBILITY FLOATING POPUP NOTIFICATION (AUTO-CLOSES IN 5s OR DISMISSED)
   ────────────────────────────────────────────────────────── */
   function showSuccessModal(formData = {}) {
     const rawName = (formData.name || "").trim();
     const safeName = rawName ? rawName.replace(/[<>]/g, "") : "There";
     const serviceName = (formData.service || "").trim();
+    const email = (formData.email || "").trim();
+    const phone = (formData.phone || "").trim();
+    const budget = (formData.budget || "").trim();
 
     // 1. Synthesize a premium soft electronic chime
     try {
@@ -713,7 +736,7 @@
         /* Floating Toast Container (Prominently visible at Top-Center, Non-blocking) */
         .aq-toast-wrapper {
           position: fixed;
-          top: 30px;
+          top: 24px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 99999999;
@@ -721,18 +744,18 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          max-width: 440px;
-          width: calc(100vw - 32px);
+          max-width: 480px;
+          width: calc(100vw - 28px);
         }
 
         /* Floating Notification Card */
         .aq-toast-card {
           pointer-events: auto;
           position: relative;
-          background: linear-gradient(135deg, rgba(10, 16, 32, 0.98) 0%, rgba(4, 8, 20, 0.99) 100%);
-          border: 2px solid #00e5c4;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9),
-                      0 0 35px rgba(0, 229, 196, 0.35),
+          background: linear-gradient(135deg, rgba(8, 14, 28, 0.98) 0%, rgba(4, 8, 18, 0.99) 100%);
+          border: 2px solid #00f2fe;
+          box-shadow: 0 24px 60px rgba(0, 0, 0, 0.92),
+                      0 0 35px rgba(0, 242, 254, 0.35),
                       inset 0 1px 1px rgba(255, 255, 255, 0.25);
           border-radius: 20px;
           padding: 20px 22px 18px;
@@ -753,26 +776,26 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 8px;
+          margin-bottom: 10px;
         }
         .aq-toast-badge {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          background: rgba(0, 229, 196, 0.12);
-          border: 1px solid rgba(0, 229, 196, 0.4);
-          padding: 3px 9px;
+          background: rgba(0, 242, 254, 0.12);
+          border: 1px solid rgba(0, 242, 254, 0.4);
+          padding: 3px 10px;
           border-radius: 20px;
           font-family: var(--font-mono, monospace);
-          font-size: 10.5px;
+          font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.5px;
-          color: #00e5c4 !important;
+          color: #00f2fe !important;
           text-transform: uppercase;
         }
         .aq-toast-badge-dot {
-          width: 6px;
-          height: 6px;
+          width: 7px;
+          height: 7px;
           border-radius: 50%;
           background: #00e5c4;
           box-shadow: 0 0 8px #00e5c4;
@@ -781,21 +804,21 @@
           background: rgba(255, 255, 255, 0.08);
           border: 1px solid rgba(255, 255, 255, 0.15);
           color: #cbd5e1;
-          width: 26px;
-          height: 26px;
+          width: 28px;
+          height: 28px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1;
           transition: all 0.2s ease;
         }
         .aq-toast-close:hover {
           background: rgba(255, 255, 255, 0.2);
           color: #ffffff;
-          border-color: #00e5c4;
+          border-color: #00f2fe;
         }
 
         /* Body Content */
@@ -806,8 +829,8 @@
           margin-bottom: 12px;
         }
         .aq-toast-icon {
-          width: 36px;
-          height: 36px;
+          width: 38px;
+          height: 38px;
           flex-shrink: 0;
           border-radius: 50%;
           background: rgba(0, 229, 196, 0.15);
@@ -816,13 +839,13 @@
           align-items: center;
           justify-content: center;
           color: #00e5c4;
-          box-shadow: 0 0 12px rgba(0, 229, 196, 0.4);
+          box-shadow: 0 0 14px rgba(0, 229, 196, 0.45);
         }
         .aq-toast-text {
           flex-grow: 1;
         }
         .aq-toast-title {
-          font-size: 15px;
+          font-size: 16px;
           font-weight: 800;
           color: #ffffff !important;
           margin: 0 0 3px 0;
@@ -830,21 +853,49 @@
           font-family: var(--font-display, sans-serif);
         }
         .aq-toast-desc {
-          font-size: 12px;
+          font-size: 12.5px;
           color: #cbd5e1 !important;
           margin: 0;
-          line-height: 1.4;
+          line-height: 1.45;
         }
         .aq-toast-desc strong {
           color: #00f2fe !important;
         }
+
+        /* Summary Box */
+        .aq-toast-summary {
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.09);
+          border-radius: 10px;
+          padding: 8px 12px;
+          margin-top: 8px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 6px;
+          font-size: 11px;
+        }
+        .aq-toast-summary-item {
+          color: #94a3b8;
+        }
+        .aq-toast-summary-item span {
+          color: #ffffff;
+          font-weight: 600;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .aq-toast-summary-item.full-span {
+          grid-column: span 2;
+        }
+
         .aq-toast-subinfo {
           display: flex;
           align-items: center;
-          gap: 10px;
-          font-size: 11px;
+          justify-content: space-between;
+          font-size: 11.5px;
           color: #94a3b8 !important;
-          margin-top: 5px;
+          margin-top: 8px;
         }
         .aq-toast-subinfo span {
           color: #00e5c4 !important;
@@ -856,6 +907,7 @@
           display: flex;
           align-items: center;
           gap: 8px;
+          margin-top: 10px;
         }
         .aq-toast-wa-btn {
           flex-grow: 1;
@@ -863,14 +915,14 @@
           align-items: center;
           justify-content: center;
           gap: 7px;
-          padding: 8px 14px;
+          padding: 9px 14px;
           border-radius: 10px;
           background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
           color: #ffffff !important;
           text-decoration: none;
-          font-size: 12px;
+          font-size: 12.5px;
           font-weight: 700;
-          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+          box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
           transition: all 0.2s ease;
           border: none;
           cursor: pointer;
@@ -878,10 +930,10 @@
         .aq-toast-wa-btn:hover {
           transform: translateY(-1px);
           filter: brightness(1.08);
-          box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+          box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
         }
         .aq-toast-dismiss-btn {
-          padding: 8px 14px;
+          padding: 9px 14px;
           border-radius: 10px;
           background: rgba(255, 255, 255, 0.06);
           border: 1px solid rgba(255, 255, 255, 0.15);
@@ -897,7 +949,7 @@
           border-color: #00f2fe;
         }
 
-        /* 3.5s Progress Bar */
+        /* 5s Progress Bar */
         .aq-toast-progress-track {
           position: absolute;
           bottom: 0;
@@ -911,7 +963,7 @@
           width: 100%;
           background: linear-gradient(90deg, #00e5c4, #00f2fe);
           transform-origin: left center;
-          animation: aqProgressAnim 3.5s linear forwards;
+          animation: aqProgressAnim 5s linear forwards;
         }
         @keyframes aqProgressAnim {
           from { transform: scaleX(1); }
@@ -942,24 +994,34 @@
       <div class="aq-toast-header">
         <div class="aq-toast-badge">
           <span class="aq-toast-badge-dot"></span>
-          <span>Transmission Secured</span>
+          <span>Inquiry Delivered</span>
         </div>
         <button class="aq-toast-close" aria-label="Close">&times;</button>
       </div>
 
       <div class="aq-toast-body">
         <div class="aq-toast-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
         <div class="aq-toast-text">
           <h4 class="aq-toast-title">Message Sent Successfully!</h4>
           <p class="aq-toast-desc">
-            Thank you, <strong>${safeName}</strong>! Your inquiry is delivered directly to Engr. Ahmed Aqeel.
+            Thank you, <strong>${safeName}</strong>! Your inquiry was sent directly to Engr. Ahmed Aqeel.
           </p>
+
+          ${serviceName || budget || email ? `
+            <div class="aq-toast-summary">
+              ${serviceName ? `<div class="aq-toast-summary-item ${budget ? '' : 'full-span'}">Service: <span>${serviceName}</span></div>` : ''}
+              ${budget ? `<div class="aq-toast-summary-item">Budget: <span>${budget}</span></div>` : ''}
+              ${email ? `<div class="aq-toast-summary-item full-span">Confirmation sent to: <span>${email}</span></div>` : ''}
+            </div>
+          ` : ''}
+
           <div class="aq-toast-subinfo">
-            <div>⚡ Response: <span>Within Minutes</span></div>
+            <div>⚡ Direct Status: <span>Active in Inbox</span></div>
+            <div>⏱️ Expected Reply: <span>Within Minutes</span></div>
           </div>
         </div>
       </div>
@@ -971,7 +1033,7 @@
           </svg>
           WhatsApp Direct &rarr;
         </a>
-        <button class="aq-toast-dismiss-btn">Dismiss</button>
+        <button class="aq-toast-dismiss-btn">Done</button>
       </div>
 
       <div class="aq-toast-progress-track">
@@ -986,10 +1048,10 @@
       toast.classList.add("is-visible");
     });
 
-    // 7. Auto-dismiss after 3.5 seconds
+    // 7. Auto-dismiss after 5 seconds
     let dismissTimeout = setTimeout(() => {
       closeToast();
-    }, 3500);
+    }, 5000);
 
     const closeToast = () => {
       clearTimeout(dismissTimeout);
@@ -1007,7 +1069,7 @@
     toast.addEventListener("mouseleave", () => {
       const bar = toast.querySelector(".aq-toast-progress-bar");
       if (bar) bar.style.animationPlayState = "running";
-      dismissTimeout = setTimeout(closeToast, 2000);
+      dismissTimeout = setTimeout(closeToast, 2500);
     });
 
     toast.querySelector(".aq-toast-close").addEventListener("click", closeToast);

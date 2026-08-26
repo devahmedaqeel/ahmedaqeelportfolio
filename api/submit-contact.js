@@ -104,7 +104,7 @@ module.exports = async function handler(req, res) {
     if (phone && phone.length > 30) {
       return res.status(400).json({ success: false, message: 'Phone is too long (maximum 30 characters)' });
     }
-    if (service && service.length > 50) {
+    if (service && service.length > 150) {
       return res.status(400).json({ success: false, message: 'Service selection is invalid or too long' });
     }
     if (budget && budget.length > 100) {
@@ -141,7 +141,7 @@ module.exports = async function handler(req, res) {
       from: `"Ahmed Aqeel Portfolio" <${process.env.GMAIL_USER}>`,
       to: process.env.ADMIN_EMAIL || 'engrahmedaqeel14@gmail.com',
       replyTo: email,
-      subject: 'New Portfolio Contact Message - Ahmed Aqeel',
+      subject: `💼 New Project Inquiry: ${safeName} (${safeService}) - Ahmed Aqeel Portfolio`,
       
       // Beautiful Plain Text Fallback Version
       text: `💼 NEW CONTACT MESSAGE - AHMED AQEEL
