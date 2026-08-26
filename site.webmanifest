@@ -1,0 +1,20 @@
+{
+  "name": "Ahmed Aqeel | AI Full Stack Developer & Founder of DevOrbit Tech",
+  "short_name": "Ahmed Aqeel",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#00e5c4",
+  "background_color": "#020408",
+  "display": "standalone",
+  "start_url": "/"
+}

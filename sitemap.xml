@@ -29,11 +29,15 @@
     </image:image>
     <image:image>
       <image:loc>https://ahmedaqeeldev.com/images/service-5.png</image:loc>
-      <image:title>Frontend and UI Design - Ahmed Aqeel</image:title>
+      <image:title>Graphic Designing, Brand Identity and UI/UX - Ahmed Aqeel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://ahmedaqeeldev.com/images/service-6.png</image:loc>
       <image:title>Firebase and Supabase Backend Architecture - Ahmed Aqeel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/favicon.png</image:loc>
+      <image:title>Ahmed Aqeel Developer Brand Logo Icon</image:title>
     </image:image>
   </url>
 </urlset>
