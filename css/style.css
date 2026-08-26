@@ -7502,4 +7502,121 @@ html[data-theme="light"] .project-filter-btn.active .project-filter-count {
   }
 }
 
+/* ================================================================
+   ZERO-LAG 60FPS SMOOTH FLUID RESPONSIVE SYSTEM (ALL SCREEN SIZES)
+   ================================================================ */
+
+/* Global image safety & hardware acceleration */
+img, svg, picture, video, canvas {
+  max-width: 100%;
+  height: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Ensure no horizontal scrollbar leakage across any browser */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip !important;
+}
+
+/* Tablet & iPad Pro Optimization (768px - 1100px) */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .hero-container {
+    padding: 0 24px;
+    gap: 32px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+/* Standard Mobile Optimization (481px - 767px) */
+@media (max-width: 767px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline,
+  .hero-actions .btn-resume {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    font-size: 14.5px;
+  }
+  .project-filter-btn {
+    padding: 8px 14px;
+    font-size: 12.5px;
+    min-height: 38px;
+  }
+  .skills-grid, .projects-grid, .cert-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .contact-info-card, .form-card {
+    border-radius: 16px !important;
+  }
+  .form-submit {
+    min-height: 50px !important;
+    font-size: 15px !important;
+    border-radius: 100px !important;
+  }
+}
+
+/* Compact Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: clamp(26px, 8.5vw, 36px) !important;
+  }
+  .sec-title {
+    font-size: clamp(24px, 7.5vw, 32px) !important;
+  }
+  .sec-sub {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+  }
+  .sv2-card {
+    border-radius: 16px !important;
+  }
+  .sv2-title {
+    font-size: 17px !important;
+  }
+  .sv2-desc {
+    font-size: 13px !important;
+  }
+  .sv2-disclosure-content {
+    font-size: 12.5px !important;
+  }
+  .project-card {
+    border-radius: 16px !important;
+  }
+  .project-title {
+    font-size: 17px !important;
+  }
+  .footer-bottom-inner {
+    flex-direction: column !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+}
+
+
 
