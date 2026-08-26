@@ -1,7 +1,11 @@
 {
-  "name": "portfolio-pro",
+  "name": "ahmedaqeelportfolio",
   "version": "4.0.0",
   "private": true,
+  "scripts": {
+    "build": "echo 'Build successful'",
+    "start": "npx serve ."
+  },
   "dependencies": {
     "nodemailer": "^6.9.13"
   }
