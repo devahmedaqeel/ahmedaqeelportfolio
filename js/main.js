@@ -513,12 +513,7 @@
         });
 
         try {
-          fetch('/api/submit-contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, phone, service: serviceLabel, budget, message, website })
-          }).catch((e) => console.log("SMTP API background dispatch:", e));
-
+          // Single reliable dispatch directly to FormSubmit
           fetch('https://formsubmit.co/ajax/engrahmedaqeel14@gmail.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -533,12 +528,11 @@
               "_subject": `💼 New Client Inquiry: ${name} (${serviceLabel}) - Ahmed Aqeel Portfolio`,
               "_replyto": email,
               "_template": "table",
-              "_captcha": "false",
-              "_autoresponse": `Hi ${name},\n\nThank you for contacting Engr. Ahmed Aqeel through the portfolio website (https://ahmedaqeeldev.com)!\n\nYour project inquiry regarding "${serviceLabel}" has been received successfully.\n\n📌 Summary of your inquiry:\n• Service: ${serviceLabel}\n• Budget: ${budget || "Flexible"}\n• Message: "${message}"\n\nI will review your requirements and get back to you promptly (typically within a few minutes).\n\nIf you would like to discuss immediately, you can also reach me on WhatsApp:\n📱 WhatsApp: +92 316 189 3004\n✉️ Email: engrahmedaqeel14@gmail.com\n🌐 Website: https://ahmedaqeeldev.com\n\nBest regards,\nEngr. Ahmed Aqeel\nFull Stack AI Developer & Software Engineer`
+              "_captcha": "false"
             })
-          }).catch((e) => console.log("FormSubmit fallback background dispatch:", e));
+          }).catch((e) => console.log("FormSubmit dispatch:", e));
         } catch (dispatchErr) {
-          console.warn("Background dispatch notice:", dispatchErr);
+          console.warn("FormSubmit notice:", dispatchErr);
         }
 
         contactForm.reset();
