@@ -513,26 +513,39 @@
         });
 
         try {
-          // Single reliable dispatch directly to FormSubmit
-          fetch('https://formsubmit.co/ajax/engrahmedaqeel14@gmail.com', {
+          // 1. Primary dispatch to custom branded email API (Exact design requested by Ahmed)
+          const apiResponse = await fetch('/api/submit-contact', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({
-              "👤 Client Name": name,
-              "📧 Email Address": email,
-              "📞 WhatsApp / Phone": phone || "Not provided",
-              "🛠️ Requested Service": serviceLabel,
-              "💰 Budget Range": budget || "Flexible / Not specified",
-              "📝 Project Requirements & Message": message || "No additional message",
-              "🗓️ Submitted On": nowFormatted,
-              "_subject": `💼 New Client Inquiry: ${name} (${serviceLabel}) - Ahmed Aqeel Portfolio`,
-              "_replyto": email,
-              "_template": "table",
-              "_captcha": "false"
-            })
-          }).catch((e) => console.log("FormSubmit dispatch:", e));
-        } catch (dispatchErr) {
-          console.warn("FormSubmit notice:", dispatchErr);
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, service: serviceLabel, budget, message, website })
+          });
+
+          if (!apiResponse.ok) {
+            throw new Error(`API returned status ${apiResponse.status}`);
+          }
+        } catch (apiErr) {
+          console.warn("Primary API unavailable or running on static hosting, using fallback:", apiErr);
+          try {
+            // Fallback dispatch only if primary API fails
+            await fetch('https://formsubmit.co/ajax/engrahmedaqeel14@gmail.com', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify({
+                "👤 Client Name": name,
+                "📧 Email Address": email,
+                "📞 WhatsApp / Phone": phone || "Not provided",
+                "🛠️ Requested Service": serviceLabel,
+                "💰 Budget Range": budget || "Flexible / Not specified",
+                "📝 Project Requirements & Message": message || "No additional message",
+                "🗓️ Submitted On": nowFormatted,
+                "_subject": `💼 New Client Inquiry: ${name} (${serviceLabel}) - Ahmed Aqeel Portfolio`,
+                "_replyto": email,
+                "_captcha": "false"
+              })
+            });
+          } catch (fallbackErr) {
+            console.error("Fallback dispatch notice:", fallbackErr);
+          }
         }
 
         contactForm.reset();
