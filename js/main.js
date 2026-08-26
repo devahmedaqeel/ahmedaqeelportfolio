@@ -281,6 +281,7 @@
       `Available commands:<br>
        &bull; <span class="term-cmd">about</span>    — bio &amp; credentials<br>
        &bull; <span class="term-cmd">skills</span>   — full tech stack<br>
+       &bull; <span class="term-cmd">certs</span>    — verified certifications &amp; achievements<br>
        &bull; <span class="term-cmd">projects</span> — key projects<br>
        &bull; <span class="term-cmd">contact</span>  — contact details<br>
        &bull; <span class="term-cmd">neofetch</span> — system banner<br>
@@ -302,6 +303,22 @@
        &bull; AI Tools   : Claude, ChatGPT, Gemini, Ollama, n8n<br>
        &bull; Deploy     : Vercel, Netlify, Docker<br>
        &bull; Design     : Figma, Photoshop, Illustrator, Premiere Pro`,
+    certs:
+      `<span class="term-highlight">Verified Certifications &amp; Achievements</span><br>
+       &bull; <b>Meta — React Native Specialization</b> (Coursera ID: <span style="color:var(--accent)">VMI5AHPW66BK</span>)<br>
+         <i>Cross-platform mobile apps, component architecture, state management</i><br>
+       &bull; <b>CodeAlpha — Python Programming Internship</b> (ID: <span style="color:var(--accent)">CA/DF1/54924</span>)<br>
+         <i>Automation pipelines, scripting algorithms, software lifecycle</i><br>
+       &bull; <b>CodeAlpha — Official Letter of Recommendation</b><br>
+         <i>Commended for analytical excellence, fast adaptability &amp; high productivity</i>`,
+    certifications:
+      `<span class="term-highlight">Verified Certifications &amp; Achievements</span><br>
+       &bull; <b>Meta — React Native Specialization</b> (Coursera ID: <span style="color:var(--accent)">VMI5AHPW66BK</span>)<br>
+         <i>Cross-platform mobile apps, component architecture, state management</i><br>
+       &bull; <b>CodeAlpha — Python Programming Internship</b> (ID: <span style="color:var(--accent)">CA/DF1/54924</span>)<br>
+         <i>Automation pipelines, scripting algorithms, software lifecycle</i><br>
+       &bull; <b>CodeAlpha — Official Letter of Recommendation</b><br>
+         <i>Commended for analytical excellence, fast adaptability &amp; high productivity</i>`,
     projects:
       `<span class="term-highlight">Featured Projects (12 Active Repos)</span><br>
        &bull; <b>Devorbittech</b> — Enterprise AI Platform (devorbittech.org)<br>
@@ -1171,6 +1188,192 @@
 
   initProjectFilters();
   document.addEventListener("DOMContentLoaded", initProjectFilters);
+
+  /* ──────────────────────────────────────────────────────────
+     CERTIFICATIONS & ACHIEVEMENTS CONTROLLER
+     Modal Lightbox & 1-Click Clipboard ID Copy
+  ──────────────────────────────────────────────────────────── */
+  function initCertificationsController() {
+    const certModal = $("#cert-modal");
+    const modalClose = $("#cert-modal-close");
+    const modalVisual = $("#cert-modal-visual");
+    const modalTag = $("#cert-modal-tag");
+    const modalTitle = $("#modal-cert-title");
+    const modalOrg = $("#cert-modal-org");
+    const modalDesc = $("#cert-modal-desc");
+    const modalIdBox = $("#cert-modal-id-box");
+    const modalIdText = $("#cert-modal-id-text");
+    const modalCopyBtn = $("#cert-modal-copy-btn");
+    const modalVerifyLink = $("#cert-modal-verify-link");
+    const modalPdfLink = $("#cert-modal-pdf-link");
+    const modalDownloadLink = $("#cert-modal-download-link");
+
+    const certData = {
+      meta: {
+        tag: "Meta Professional Credential",
+        title: "React Native Specialization",
+        org: "Meta Platforms, Inc. & Coursera",
+        desc: "Authorized by Meta instructors. Validates professional competence in cross-platform mobile application development, React Native components lifecycle, state management, React navigation, UI design principles, and native API integration.",
+        id: "VMI5AHPW66BK",
+        verifyUrl: "https://www.coursera.org/account/accomplishments/verify/VMI5AHPW66BK",
+        verifyText: "Verify on Coursera",
+        pdfUrl: null,
+        visualHtml: `<img src="images/meta-react-native-cert.jpg" alt="Meta React Native Certificate - Ahmed Aqeel" style="width:100%; height:auto; display:block; border-radius:10px; max-height:480px; object-fit:contain;">`
+      },
+      "codealpha-cert": {
+        tag: "Verified Internship Certificate",
+        title: "Python Programming Internship",
+        org: "CodeAlpha (Govt. of India MSME Registered)",
+        desc: "Officially awarded to Ahmed Aqeel (Student ID: CA/DF1/54924) for active participation and successful completion of the CodeAlpha Virtual Internship Program in Python Programming from 1st May 2026 to 30th May 2026 with hard work and high dedication. Issued 1st June 2026 by Swati Sri, CEO & Founder.",
+        id: "CA/DF1/54924",
+        verifyUrl: "https://www.codealpha.tech",
+        verifyText: "CodeAlpha Portal",
+        pdfUrl: "certificates/codealpha-python-internship-certificate.pdf",
+        pdfName: "Ahmed_Aqeel_CodeAlpha_Python_Certificate.pdf",
+        visualHtml: `<img src="images/codealpha-python-cert.jpg" alt="CodeAlpha Python Certificate - Ahmed Aqeel" style="width:100%; height:auto; display:block; border-radius:10px; max-height:480px; object-fit:contain;">`
+      },
+      "codealpha-lor": {
+        tag: "Official Merit Commendation",
+        title: "Letter of Recommendation (LOR)",
+        org: "CodeAlpha — Swati Sri (Founder & CEO)",
+        desc: "Official Letter of Recommendation certifying that Ahmed Aqeel has successfully completed the Virtual Internship Program at CodeAlpha as a Python Programming Intern. Commended for outstanding performance: 'He exhibited performance in this role and made a valuable contribution. He has excellent analytical skills, quickly acquired new skills, and adeptly adapted to emerging technologies, demonstrating a high level of productivity and strong team collaboration.'",
+        id: "CA/DF1/54924",
+        verifyUrl: "mailto:services@codealpha.tech",
+        verifyText: "Contact Issuer",
+        pdfUrl: "certificates/codealpha-letter-of-recommendation.pdf",
+        pdfName: "Ahmed_Aqeel_CodeAlpha_Recommendation_Letter.pdf",
+        visualHtml: `<img src="images/codealpha-recommendation-letter.jpg" alt="CodeAlpha Recommendation Letter - Ahmed Aqeel" style="width:100%; height:auto; display:block; border-radius:10px; max-height:480px; object-fit:contain;">`
+      }
+    };
+
+    function openModal(certKey) {
+      const data = certData[certKey];
+      if (!data || !certModal) return;
+
+      if (modalVisual) modalVisual.innerHTML = data.visualHtml;
+      if (modalTag) modalTag.textContent = data.tag;
+      if (modalTitle) modalTitle.textContent = data.title;
+      if (modalOrg) modalOrg.textContent = data.org;
+      if (modalDesc) modalDesc.textContent = data.desc;
+      if (modalIdText) modalIdText.textContent = data.id;
+
+      if (modalCopyBtn) {
+        modalCopyBtn.setAttribute("data-clipboard", data.id);
+        const statusSpan = modalCopyBtn.querySelector(".modal-copy-status");
+        if (statusSpan) statusSpan.textContent = "Copy ID";
+      }
+
+      if (modalVerifyLink) {
+        modalVerifyLink.href = data.verifyUrl;
+        const textSpan = modalVerifyLink.querySelector("span");
+        if (textSpan) textSpan.textContent = data.verifyText;
+      }
+
+      if (modalPdfLink) {
+        if (data.pdfUrl) {
+          modalPdfLink.href = data.pdfUrl;
+          modalPdfLink.style.display = "inline-flex";
+        } else {
+          modalPdfLink.style.display = "none";
+        }
+      }
+
+      if (modalDownloadLink) {
+        if (data.pdfUrl) {
+          modalDownloadLink.href = data.pdfUrl;
+          modalDownloadLink.setAttribute("download", data.pdfName || "Certificate.pdf");
+          modalDownloadLink.style.display = "inline-flex";
+        } else {
+          modalDownloadLink.style.display = "none";
+        }
+      }
+
+      certModal.classList.add("active");
+      certModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      if (!certModal) return;
+      certModal.classList.remove("active");
+      certModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    // Attach click triggers on cards and buttons
+    $$(".open-cert-trigger").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const certKey = el.getAttribute("data-cert-target") || el.closest(".cert-card")?.getAttribute("data-cert");
+        if (certKey) openModal(certKey);
+      });
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          const certKey = el.getAttribute("data-cert-target") || el.closest(".cert-card")?.getAttribute("data-cert");
+          if (certKey) openModal(certKey);
+        }
+      });
+    });
+
+    if (modalClose) {
+      modalClose.addEventListener("click", closeModal);
+    }
+
+    if (certModal) {
+      certModal.addEventListener("click", (e) => {
+        if (e.target === certModal) closeModal();
+      });
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && certModal && certModal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+
+    // 1-Click Clipboard Copy Handler
+    document.addEventListener("click", (e) => {
+      const copyBtn = e.target.closest("[data-clipboard]");
+      if (!copyBtn) return;
+      const textToCopy = copyBtn.getAttribute("data-clipboard");
+      if (!textToCopy) return;
+
+      const copyToClipboard = () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(textToCopy);
+        }
+        const ta = document.createElement("textarea");
+        ta.value = textToCopy;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        return Promise.resolve();
+      };
+
+      copyToClipboard().then(() => {
+        copyBtn.classList.add("copied");
+        const statusSpan = copyBtn.querySelector(".modal-copy-status") || copyBtn.querySelector(".copy-feedback");
+        if (statusSpan && statusSpan.classList.contains("modal-copy-status")) {
+          statusSpan.textContent = "Copied!";
+        }
+        setTimeout(() => {
+          copyBtn.classList.remove("copied");
+          if (statusSpan && statusSpan.classList.contains("modal-copy-status")) {
+            statusSpan.textContent = "Copy ID";
+          }
+        }, 2000);
+      }).catch((err) => {
+        console.warn("Copy failed:", err);
+      });
+    });
+  }
+
+  initCertificationsController();
+  document.addEventListener("DOMContentLoaded", initCertificationsController);
 
 })();
 
