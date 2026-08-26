@@ -1478,6 +1478,8 @@
             <textarea id="c-msg" name="message" placeholder="Describe your project — what you need, your goals, and any relevant details." required></textarea>
           </div>
 
+          <div class="form-status" id="form-status" hidden></div>
+
           <button class="form-submit" type="submit">
             Send Message →
           </button>
@@ -1654,21 +1656,6 @@
   <!-- Scripts -->
   <script src="js/skills-data.js?v=1.0"></script>
   <script src="js/skills.js?v=1.0"></script>
-  <script src="js/services-tier.js?v=1.0"></script>
-  <script src="js/services-light.js?v=1.0"></script>
-  <script src="js/services-tilt.js?v=1.0"></script>
-  <script src="js/services-assembly.js?v=1.0"></script>
-  <!-- stack-network has its own self-contained capability checks (this
-       spec's degradation table differs from the services tier system's),
-       so it doesn't depend on services-tier.js loading first -->
-  <script>
-    // TEMP DEV-ONLY TEST SHIM — remove before shipping. Automation sandbox
-    // never fires real rAF in a backgrounded tab; ?rafshim=1 swaps in a
-    // setTimeout-driven polyfill so the render loop can be exercised.
-    if (location.search.includes("rafshim=1")) {
-      window.requestAnimationFrame = function (cb) { return setTimeout(() => cb(performance.now()), 16); };
-    }
-  </script>
   <script src="js/neural-background.js?v=1.0"></script>
   <script src="js/main.js?v=6.8"></script>
 
