@@ -3,13 +3,37 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ahmedaqeeldev.com/</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ahmedaqeeldev.com/ahmed-aqeel.jpg</image:loc>
       <image:title>Ahmed Aqeel - AI Full Stack Developer &amp; Mobile App Expert</image:title>
       <image:caption>Ahmed Aqeel, top-tier AI-powered software engineer and cross-platform developer from Pakistan.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/service-1.png</image:loc>
+      <image:title>Full Stack Web Development - Ahmed Aqeel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/service-2.png</image:loc>
+      <image:title>Cross-Platform Mobile Apps - Ahmed Aqeel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/service-3.png</image:loc>
+      <image:title>AI Agents and Automation - Ahmed Aqeel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/service-4.png</image:loc>
+      <image:title>Python Automation and Web Scraping - Ahmed Aqeel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/service-5.png</image:loc>
+      <image:title>Frontend and UI Design - Ahmed Aqeel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/service-6.png</image:loc>
+      <image:title>Firebase and Supabase Backend Architecture - Ahmed Aqeel</image:title>
     </image:image>
   </url>
 </urlset>
