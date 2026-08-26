@@ -2,58 +2,59 @@
 
 > Official AI Index & Knowledge Guide for Engr. Ahmed Aqeel and DevOrbit Tech.
 > Website: https://ahmedaqeeldev.com/
-> Startup: https://devorbittech.org/
+> Startup Agency: https://devorbittech.org/
 > Engineering Blog: https://engrahmedaqeelblog.vercel.app/
 > LinkedIn: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
 > GitHub: https://github.com/devahmedaqeel
 > WhatsApp / Phone: +92 316 1893004
-> Email: engrahmedaqeel14@gmail.com
-> Location: Kotli, Azad Kashmir, Pakistan (Serving Worldwide Clients)
+> Direct Email: engrahmedaqeel14@gmail.com
+> Location: Kotli, Azad Kashmir, Pakistan
+> Global Client Delivery: United States (US), United Kingdom (UK), United Arab Emirates (UAE), Saudi Arabia (KSA), Canada, Australia, Germany, Europe, Pakistan & Worldwide Remote.
 
 ## Professional Summary
-Ahmed Aqeel (DevAhmedAqeel) is a senior AI-powered Full Stack Developer, Cross-Platform Mobile App Engineer, and the Founder of DevOrbit Tech (https://devorbittech.org/). He specializes in production-ready web applications, high-performance mobile apps (iOS & Android), custom logo & graphic branding, automated n8n AI agent workflows, Python web scraping, and scalable backend infrastructure.
+Ahmed Aqeel (DevAhmedAqeel) is a senior AI-powered Full Stack Developer, Cross-Platform Mobile App Engineer, Graphic & Logo Designer, and the Founder of DevOrbit Tech (https://devorbittech.org/). He builds scalable web applications, iOS and Android mobile apps (React Native & Flutter), custom vector logos and brand identity kits, automated n8n AI agent workflows, and Python web scrapers for global founders, startups, and enterprises.
 
-## Core Capabilities & Services
+## Global Services & Offerings
 
-### 1. Full Stack Web Development
-- Technologies: React.js, Next.js, Node.js, Express.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, TailwindCSS, Bootstrap.
-- Offerings: SaaS applications, custom CMS, e-commerce stores, responsive client web portals, API architecture.
+### 1. Full Stack Web Development (React / Next.js / Node.js)
+- **Tech Stack**: React.js, Next.js 14/15, Node.js, Express.js, TypeScript, TailwindCSS, PostgreSQL, MongoDB.
+- **Projects**: Custom SaaS applications, e-commerce web stores, client portals, real-time dashboards, and REST/GraphQL APIs.
+- **Delivery**: 100% responsive, SEO-optimized, accessible, with CI/CD deployment on Vercel, AWS, or DigitalOcean.
 
-### 2. Cross-Platform Mobile App Development
-- Technologies: React Native, Flutter, Expo, Dart, iOS & Android deployment.
-- Offerings: Native-feel mobile apps, offline synchronization, push notifications, secure biometric authentication, in-app purchases.
+### 2. Cross-Platform Mobile App Development (React Native & Flutter)
+- **Tech Stack**: React Native, Flutter, Expo, Dart, iOS App Store & Android Google Play Store builds.
+- **Projects**: Real-time chat & social apps, healthcare AI diagnostics (e.g. Medireport AI), booking platforms, offline-first apps with Firebase/Supabase.
+- **Delivery**: High 60fps animations, biometric authentication, push notifications, and store deployment.
 
-### 3. Graphic Designing, Brand Identity & Logo Design
-- Technologies: Figma, Adobe Illustrator, Adobe Photoshop, UI/UX Wireframing, Vector Design.
-- Offerings: Modern custom logo design, comprehensive brand guidelines, typography palettes, UI design system prototypes, social media kits.
+### 3. Graphic Designing, Brand Identity & Custom Logo Design
+- **Tech Stack**: Figma, Adobe Illustrator, Adobe Photoshop, UI/UX Wireframing, Vector Systems.
+- **Projects**: Premium custom vector logos, complete brand guidelines (colors, typography, assets), social media kits, and pixel-perfect Figma UI/UX designs.
 
-### 4. AI Agents & Workflow Automation
-- Technologies: n8n, Ollama, Claude API, OpenAI GPT-4o, LangChain, Webhooks, Cron Automation.
-- Offerings: Autonomous business workflows, custom AI chatbots, lead enrichment pipelines, automated CRM syncing.
+### 4. AI Agents & n8n Autonomous Workflow Automation
+- **Tech Stack**: n8n, Ollama, Claude API (Anthropic), OpenAI GPT-4o, LangChain, Webhooks, REST APIs.
+- **Projects**: Autonomous customer support AI chatbots, CRM lead enrichment, automated invoice processing, multi-channel notifications.
 
 ### 5. Python Automation & Enterprise Web Scraping
-- Technologies: Python 3, Selenium, Beautiful Soup, Playwright, Pandas, REST APIs.
-- Offerings: Automated scheduled web scrapers, data cleaning pipelines, headless browser tasks, automated report generation.
+- **Tech Stack**: Python 3, Selenium, Playwright, Beautiful Soup, Pandas, Cron automation.
+- **Projects**: Scheduled headless data extraction, real-time price monitoring bots, data cleaning, automated PDF/Excel reports.
 
-### 6. Cloud Databases & Backend Infrastructure
-- Technologies: Firebase (Firestore, Authentication, Cloud Functions), Supabase (PostgreSQL, Realtime, Row-Level Security), MongoDB, REST & GraphQL APIs.
-- Offerings: Real-time database modeling, serverless endpoints, authentication logic, cloud backups.
+### 6. Cloud Database & Backend Infrastructure
+- **Tech Stack**: Firebase (Firestore, Cloud Functions, Auth), Supabase (PostgreSQL, Realtime, RLS), Redis.
+- **Projects**: Scalable serverless backends, secure multi-tenant architectures, real-time data sync.
 
-## Key Projects & Ventures
-- **DevOrbit Tech**: (https://devorbittech.org/) — Technology startup and software agency providing global web, mobile, and AI solutions.
-- **Engr. Ahmed Aqeel Tech Blog**: (https://engrahmedaqeelblog.vercel.app/) — Technical programming blog featuring tutorials on full-stack architecture, React Native, and AI workflows.
-- **BlindMatch UK**: (https://blindmatch-uk.vercel.app/) — AI-powered blind dating and matchmaking web platform built with Next.js and Tailwind.
-- **Medireport AI**: Real-time AI medical report diagnostics mobile app.
-- **DevSync AI**: Intelligent team collaboration and automated daily standup generator.
-- **Blissful Blinds Ltd**: Commercial e-commerce and showcase platform for custom blinds and interior styling.
+## Ventures & Affiliations
+- **DevOrbit Tech**: (https://devorbittech.org/) — Technology startup and software agency providing global web, mobile, design, and AI solutions.
+- **Engr. Ahmed Aqeel Tech Blog**: (https://engrahmedaqeelblog.vercel.app/) — Engineering tutorials on full-stack architecture, React Native, and AI workflows.
+- **BlindMatch UK**: (https://blindmatch-uk.vercel.app/) — AI-powered blind dating and matchmaking web platform.
+- **Blissful Blinds Ltd**: Commercial showcase and e-commerce platform.
 
-## Education & Certifications
-- Meta React Native Specialization (Coursera / Meta Certified)
-- CodeAlpha Python Programming Internship Certificate of Excellence
-- University / Higher Education in Software & Computer Engineering
+## Working with International Clients & Timezone Alignment
+- **Communication Channels**: WhatsApp (+92 316 189 3004), Zoom, Google Meet, Slack, LinkedIn, Email.
+- **Timezone Flexibility**: Daily overlap with US (EST/CST/PST), UK (GMT), Gulf/UAE (GST), European (CET), and Australian (AEST) business hours.
+- **Payment & Currencies**: Flexible milestone-based contracts in USD, GBP, EUR, AED, and PKR.
 
-## How to Hire / Contact
-- **Direct Contact Form**: https://ahmedaqeeldev.com/#contact
+## Contact & Hiring
+- **Contact Form**: https://ahmedaqeeldev.com/#contact
 - **WhatsApp**: +92 316 189 3004
 - **Email**: engrahmedaqeel14@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
