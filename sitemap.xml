@@ -3,13 +3,17 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ahmedaqeeldev.com/</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ahmedaqeeldev.com/ahmed-aqeel.jpg</image:loc>
-      <image:title>Ahmed Aqeel - AI Full Stack Developer &amp; Mobile App Expert</image:title>
-      <image:caption>Ahmed Aqeel, top-tier AI-powered software engineer and cross-platform developer from Pakistan.</image:caption>
+      <image:title>Ahmed Aqeel - Full Stack AI Developer &amp; Software Engineer</image:title>
+      <image:caption>Ahmed Aqeel, Full Stack Developer and Software Engineer specializing in web applications, mobile apps, SaaS, and AI automations.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/favicon.png</image:loc>
+      <image:title>Ahmed Aqeel Developer Brand Logo Icon</image:title>
     </image:image>
     <image:image>
       <image:loc>https://ahmedaqeeldev.com/images/service-1.png</image:loc>
@@ -36,8 +40,88 @@
       <image:title>Firebase and Supabase Backend Architecture - Ahmed Aqeel</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://ahmedaqeeldev.com/favicon.png</image:loc>
-      <image:title>Ahmed Aqeel Developer Brand Logo Icon</image:title>
+      <image:loc>https://ahmedaqeeldev.com/images/medireport-ai-preview.png</image:loc>
+      <image:title>Medireport AI - Medical Report Analyzer App by Ahmed Aqeel</image:title>
+      <image:caption>Healthcare lab report scanner built with React Native Expo, FastAPI, PaddleOCR, and Supabase.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/blindmatch-uk-preview.jpg</image:loc>
+      <image:title>BlindMatch UK - B2B/B2C Marketplace Platform by Ahmed Aqeel</image:title>
+      <image:caption>Blind fitting marketplace built with Next.js 15, TypeScript, Supabase, and Paddle subscriptions.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/studentnotesapp-preview.jpg</image:loc>
+      <image:title>StudentNotes App - Offline-First Document Scanner by Ahmed Aqeel</image:title>
+      <image:caption>Student productivity mobile app with camera scanning, PDF studio, SQLite, and React Native Expo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/ofm-preview.png</image:loc>
+      <image:title>Organization Finance Management App by Ahmed Aqeel</image:title>
+      <image:caption>Enterprise financial management and budget tracking mobile app built with React Native and TypeScript.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/restaurant-menu-preview.jpg</image:loc>
+      <image:title>Restaurant Digital Menu System by Ahmed Aqeel</image:title>
+      <image:caption>Real-time cloud digital signage platform with React, Vite, Expo, and WebSockets.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/engrahmedaqeel-blog-preview.jpg</image:loc>
+      <image:title>Engr. Ahmed Aqeel Technical Blog by Ahmed Aqeel</image:title>
+      <image:caption>Software engineering blog built with Next.js 13 SSG, React 18, and Tailwind CSS.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/devorbittech-platform-preview.png</image:loc>
+      <image:title>Dev Orbit Tech Platform by Ahmed Aqeel</image:title>
+      <image:caption>Enterprise web platform for Dev Orbit Tech built with HTML5, CSS3, JavaScript, and Three.js.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/blissfulblinds-preview.png</image:loc>
+      <image:title>Blissful Blinds Ltd Website by Ahmed Aqeel</image:title>
+      <image:caption>Commercial e-commerce website with responsive architecture and SEO optimization.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/bright-mind-preview.jpg</image:loc>
+      <image:title>Bright Mind Academy by Ahmed Aqeel</image:title>
+      <image:caption>Interactive cognitive learning platform built with TypeScript, React, and Tailwind CSS.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/python-automation-preview.jpg</image:loc>
+      <image:title>Python AI and Automation Suite by Ahmed Aqeel</image:title>
+      <image:caption>Rule-based NLP chatbots, web automation, and algorithmic scripting in Python 3.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/devsync-ai-preview.png</image:loc>
+      <image:title>Devsync Ai Developer Tool by Ahmed Aqeel</image:title>
+      <image:caption>Real-time AI synchronization and workflow automation assistant built with Node.js.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahmedaqeeldev.com/images/portfolio-banner-preview.png</image:loc>
+      <image:title>Ahmed Aqeel Developer Portfolio Platform</image:title>
+      <image:caption>Personal developer portfolio showcasing full stack web, mobile, SaaS, and AI engineering.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ahmedaqeeldev.com/full-stack-developer</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ahmedaqeeldev.com/ai-engineer</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ahmedaqeeldev.com/mobile-developer</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ahmedaqeeldev.com/saas-developer</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

@@ -1,60 +1,138 @@
-# Ahmed Aqeel — AI Full Stack Developer, Mobile App Engineer & Founder
+# Ahmed Aqeel — Full Stack AI Developer & Software Engineer
 
-> Official AI Index & Knowledge Guide for Engr. Ahmed Aqeel and DevOrbit Tech.
-> Website: https://ahmedaqeeldev.com/
-> Startup Agency: https://devorbittech.org/
+> Official AI Index & Knowledge Guide for Engr. Ahmed Aqeel.
+> Portfolio: https://ahmedaqeeldev.com/
+> Software Agency: https://devorbittech.org/ (Founder: Ahmed Aqeel)
 > Engineering Blog: https://engrahmedaqeelblog.vercel.app/
-> LinkedIn: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
 > GitHub: https://github.com/devahmedaqeel
+> LinkedIn: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
+> Email: engrahmedaqeel14@gmail.com
 > WhatsApp / Phone: +92 316 1893004
-> Direct Email: engrahmedaqeel14@gmail.com
-> Location: Kotli, Azad Kashmir, Pakistan
-> Global Client Delivery: United States (US), United Kingdom (UK), United Arab Emirates (UAE), Saudi Arabia (KSA), Canada, Australia, Germany, Europe, Pakistan & Worldwide Remote.
+> Location: Kotli, Azad Kashmir, Pakistan (Worldwide Remote Availability)
 
-## Professional Summary
-Ahmed Aqeel (DevAhmedAqeel) is a senior AI-powered Full Stack Developer, Cross-Platform Mobile App Engineer, Graphic & Logo Designer, and the Founder of DevOrbit Tech (https://devorbittech.org/). He builds scalable web applications, iOS and Android mobile apps (React Native & Flutter), custom vector logos and brand identity kits, automated n8n AI agent workflows, and Python web scrapers for global founders, startups, and enterprises.
+## Professional Identity & Overview
+Ahmed Aqeel (DevAhmedAqeel) is a Full Stack AI Developer, Software Engineer, and the Founder of Dev Orbit Tech. He specializes in building scalable web applications, cross-platform mobile apps for iOS and Android, robust backend APIs, custom SaaS platforms, and intelligent AI automation pipelines. He pursues a BS in Software Engineering from the University of Kotli and holds an accredited Meta React Native Specialization as well as a verified Python Engineering Internship credential from CodeAlpha.
 
-## Global Services & Offerings
+## Professional Roles & Search Query Relevance
+Ahmed Aqeel's portfolio and codebase are genuinely relevant to the following developer, engineering, and client search intents:
+- **Full Stack Development**: Full Stack Developer, Full Stack Software Engineer, Full Stack Web Developer, Full Stack Application Developer, MERN Stack Developer.
+- **Web Development**: Web Developer, Web Application Developer, React Developer, React.js Developer, Next.js Developer, Modern Frontend Engineer, JavaScript Developer, TypeScript Developer.
+- **Mobile Development**: Mobile App Developer, React Native Developer, Cross-Platform Mobile Developer, iOS App Developer, Android App Developer, Expo Developer, Flutter Developer.
+- **AI & Machine Learning**: Full Stack AI Developer, AI Engineer, AI Software Developer, AI Application Developer, LLM Developer, AI Integration Specialist, OpenAI API Developer, Gemini Developer, Claude Developer, Ollama Local LLM Developer, n8n Automation Specialist.
+- **Backend & Cloud Architecture**: Node.js Developer, Express.js Developer, Python Developer, FastAPI Developer, REST API Developer, WebSocket Engineer, Supabase Developer, Firebase Architect.
+- **Client & Business Search**: Custom Software Developer, SaaS MVP Developer, Developer for Business Automation, Developer for Web and Mobile Apps, Developer for AI-Powered Software.
 
-### 1. Full Stack Web Development (React / Next.js / Node.js)
-- **Tech Stack**: React.js, Next.js 14/15, Node.js, Express.js, TypeScript, TailwindCSS, PostgreSQL, MongoDB.
-- **Projects**: Custom SaaS applications, e-commerce web stores, client portals, real-time dashboards, and REST/GraphQL APIs.
-- **Delivery**: 100% responsive, SEO-optimized, accessible, with CI/CD deployment on Vercel, AWS, or DigitalOcean.
+## Technical Skills & Genuine Tech Stack
+- **Programming Languages**: JavaScript (ES6+), TypeScript, Python 3, HTML5, CSS3, C++, PHP, Java, C#, SQL.
+- **Frontend & Web Frameworks**: React.js, Next.js (SSG/SSR), Vite, Tailwind CSS, Three.js, Canvas 2D/3D.
+- **Mobile Development**: React Native, Expo (SDK 54), Flutter, Dart, Android Studio, Xcode toolchain, SQLite, Document Camera Scanning.
+- **Backend & APIs**: Node.js, Express.js, FastAPI, RESTful APIs, WebSockets, Serverless Functions.
+- **Databases & Cloud**: Supabase (PostgreSQL), Firebase (Firestore, Authentication, Cloud Functions), SQLite, Redis.
+- **AI & Automation**: OpenAI (GPT-4o API), Anthropic (Claude API), Google Gemini API, Ollama (Local LLMs), n8n Workflow Automation, PaddleOCR, LangChain.
+- **DevOps & Hosting**: Vercel, Netlify, Docker, Git, GitHub CI/CD, Cloudflare Workers.
+- **Design & UI/UX**: Figma, Adobe Illustrator, Adobe Photoshop, Vector Logo Design, Brand Guidelines.
 
-### 2. Cross-Platform Mobile App Development (React Native & Flutter)
-- **Tech Stack**: React Native, Flutter, Expo, Dart, iOS App Store & Android Google Play Store builds.
-- **Projects**: Real-time chat & social apps, healthcare AI diagnostics (e.g. Medireport AI), booking platforms, offline-first apps with Firebase/Supabase.
-- **Delivery**: High 60fps animations, biometric authentication, push notifications, and store deployment.
+## Verified Credentials & Education
+1. **BS in Software Engineering**: University of Kotli, AJK, Pakistan (2022 — 2026). Coursework in Data Structures & Algorithms (DSA), OOP, DBMS, System Architecture, and Software Engineering Lifecycles (SDLC).
+2. **Meta React Native Specialization**: Professional Certification issued by Meta on Coursera. Credential ID: `VMI5AHPW66BK` (Verification: https://www.coursera.org/account/accomplishments/verify/VMI5AHPW66BK).
+3. **Python Programming Internship & Executive LOR**: Issued by CodeAlpha (Govt. MSME Reg.). Student ID: `CA/DF1/54924`. Authorized by CEO Swati Sri with formal commendation for analytical excellence and rapid tech adaptability.
 
-### 3. Graphic Designing, Brand Identity & Custom Logo Design
-- **Tech Stack**: Figma, Adobe Illustrator, Adobe Photoshop, UI/UX Wireframing, Vector Systems.
-- **Projects**: Premium custom vector logos, complete brand guidelines (colors, typography, assets), social media kits, and pixel-perfect Figma UI/UX designs.
+## Production Projects & Evidence Base
+Each project below was developed by Ahmed Aqeel and is publicly verifiable on GitHub:
 
-### 4. AI Agents & n8n Autonomous Workflow Automation
-- **Tech Stack**: n8n, Ollama, Claude API (Anthropic), OpenAI GPT-4o, LangChain, Webhooks, REST APIs.
-- **Projects**: Autonomous customer support AI chatbots, CRM lead enrichment, automated invoice processing, multi-channel notifications.
+1. **Medireport AI** (AI & HealthTech Mobile/Backend)
+   - Description: AI-powered medical report analyzer that extracts data from lab reports using OCR and provides health insights.
+   - Stack: React Native, Expo, FastAPI, Python, PaddleOCR, Supabase, MedlinePlus, LOINC.
+   - Repository: https://github.com/devahmedaqeel/medireport-ai
 
-### 5. Python Automation & Enterprise Web Scraping
-- **Tech Stack**: Python 3, Selenium, Playwright, Beautiful Soup, Pandas, Cron automation.
-- **Projects**: Scheduled headless data extraction, real-time price monitoring bots, data cleaning, automated PDF/Excel reports.
+2. **BlindMatch UK** (SaaS & Marketplace Platform)
+   - Description: Commercial B2B/B2C marketplace connecting UK homeowners with verified window blind fitters, featuring a 4-step interactive quote wizard, postcode territory matching, and Paddle recurring subscriptions.
+   - Stack: Next.js 15, React, TypeScript, Supabase (PostgreSQL), Paddle, Tailwind CSS.
+   - Live URL: https://blindmatch-uk.vercel.app
+   - Repository: https://github.com/devahmedaqeel/Blindmatch-uk-
 
-### 6. Cloud Database & Backend Infrastructure
-- **Tech Stack**: Firebase (Firestore, Cloud Functions, Auth), Supabase (PostgreSQL, Realtime, RLS), Redis.
-- **Projects**: Scalable serverless backends, secure multi-tenant architectures, real-time data sync.
+3. **StudentNotes App** (Offline-First Productivity Ecosystem)
+   - Description: Native mobile productivity ecosystem featuring quad-corner document camera scanning, quad cropping, built-in PDF studio, academic vault, and SQLite persistence.
+   - Stack: React Native, Expo SDK 54, SQLite, Supabase, TypeScript.
+   - Repository: https://github.com/devahmedaqeel/studentnotesapp
 
-## Ventures & Affiliations
-- **DevOrbit Tech**: (https://devorbittech.org/) — Technology startup and software agency providing global web, mobile, design, and AI solutions.
-- **Engr. Ahmed Aqeel Tech Blog**: (https://engrahmedaqeelblog.vercel.app/) — Engineering tutorials on full-stack architecture, React Native, and AI workflows.
-- **BlindMatch UK**: (https://blindmatch-uk.vercel.app/) — AI-powered blind dating and matchmaking web platform.
-- **Blissful Blinds Ltd**: Commercial showcase and e-commerce platform.
+4. **Restaurant Digital Menu System** (Full-Stack SaaS & Cloud Signage)
+   - Description: Cloud digital signage and restaurant menu management platform featuring a full-screen tablet/TV display client, real-time WebSocket instant updates, and an admin management dashboard.
+   - Stack: React, Vite, Expo, Node.js, WebSockets.
+   - Repository: https://github.com/devahmedaqeel/Restaurant-Digital-Menu-System
 
-## Working with International Clients & Timezone Alignment
-- **Communication Channels**: WhatsApp (+92 316 189 3004), Zoom, Google Meet, Slack, LinkedIn, Email.
-- **Timezone Flexibility**: Daily overlap with US (EST/CST/PST), UK (GMT), Gulf/UAE (GST), European (CET), and Australian (AEST) business hours.
-- **Payment & Currencies**: Flexible milestone-based contracts in USD, GBP, EUR, AED, and PKR.
+5. **Organization Finance Management** (Enterprise Mobile App)
+   - Description: Cross-platform enterprise mobile app for organization budgeting, expense reporting, financial analytics, and category tracking.
+   - Stack: React Native, TypeScript, Financial Analytics.
+   - Repository: https://github.com/devahmedaqeel/Organization-Finance-Management
 
-## Contact & Hiring
-- **Contact Form**: https://ahmedaqeeldev.com/#contact
-- **WhatsApp**: +92 316 189 3004
-- **Email**: engrahmedaqeel14@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
+6. **Engr. Ahmed Aqeel Tech Blog** (Web Engineering Platform)
+   - Description: Technical engineering portfolio and blog platform built with Next.js 13 SSG, dynamic 3D mouse parallax tilt physics, automated RSS 2.0 feeds, and instant search.
+   - Stack: Next.js 13, React 18, Tailwind CSS, Vercel.
+   - Live URL: https://engr-ahmed-aqeel-blog.vercel.app
+   - Repository: https://github.com/devahmedaqeel/EngrAhmedAqeelBlog
+
+7. **Devsync Ai** (Developer Workflow Automation)
+   - Description: Real-time AI synchronization tool and developer workflow automation assistant.
+   - Stack: JavaScript, Node.js, AI Workflows.
+   - Repository: https://github.com/devahmedaqeel/devsync-ai
+
+8. **Python AI & Automation Suite** (Python Toolset)
+   - Description: Suite of Python tools featuring rule-based NLP chatbots, automated file & data workflow scripts, and web automation pipelines.
+   - Stack: Python 3, NLP, Automation scripts.
+   - Repository: https://github.com/devahmedaqeel/CodeAlpha_Project_Basic-Chatbot-
+
+9. **Bright Mind Academy** (Interactive Cognitive Web App)
+   - Description: Interactive cognitive learning platform featuring gamified logic challenges, knowledge quizzes, student progress analytics, and responsive UI.
+   - Stack: TypeScript, React, Tailwind CSS, Vite.
+   - Repository: https://github.com/devahmedaqeel/Bright-Mind
+
+10. **Devorbittech Enterprise Platform** (Web Platform)
+    - Description: Official web platform for Dev Orbit Tech showcasing AI solutions, custom software, and agency services with Canvas 3D visuals.
+    - Stack: HTML5, CSS3, JavaScript, Three.js.
+    - Live URL: https://devorbittech.org/
+    - Repository: https://github.com/devahmedaqeel/devorbittech
+
+11. **Blissful Blinds Ltd** (Commercial E-Commerce Platform)
+    - Description: Commercial e-commerce and showcase website with responsive design and search engine optimization.
+    - Stack: HTML5, CSS3, JavaScript, Technical SEO.
+    - Live URL: https://blissfulblindsltd.vercel.app/
+    - Repository: https://github.com/devahmedaqeel/blissfulblindsltd
+
+12. **Ahmed Aqeel Developer Portfolio** (Portfolio Web Platform)
+    - Description: Personal portfolio platform showcasing full-stack web, mobile, SaaS, and AI engineering work.
+    - Stack: HTML5, CSS3, JavaScript, Canvas 3D.
+    - Live URL: https://ahmedaqeeldev.com/
+    - Repository: https://github.com/devahmedaqeel/ahmedaqeelportfolio
+
+## Relationship with Dev Orbit Tech
+- **Ahmed Aqeel Portfolio** (`https://ahmedaqeeldev.com/`) is Ahmed Aqeel's personal professional portfolio showcasing his individual software engineering capabilities, open-source repositories, credentials, and projects.
+- **Dev Orbit Tech** (`https://devorbittech.org/`) is a digital technology startup and software agency founded by Ahmed Aqeel. Dev Orbit Tech delivers commercial web apps, mobile apps, graphic design kits, and AI solutions.
+- The two entities are distinct: Ahmed Aqeel is the Person entity (Founder & Lead Developer), and Dev Orbit Tech is the Organization entity.
+
+## Collaboration, Hiring & International Clients
+Ahmed Aqeel collaborates directly with founders, startups, engineering teams, and enterprise clients worldwide.
+- **Hiring Models**: Remote Full-Time Software Engineering, Contract Roles, Contract-to-Hire, Startup MVP Development, Technical Architecture Consulting.
+- **Time Zone Overlap**: Regular availability during US (EST/CST/PST), UK (GMT), UAE/Gulf (GST), European (CET), and Australian (AEST) business hours.
+- **Verified Resume (PDF)**: https://ahmedaqeeldev.com/Ahmed_Aqeel_Resume.pdf
+- **Direct Contact**:
+  - Email: engrahmedaqeel14@gmail.com
+  - WhatsApp: +92 316 1893004
+  - LinkedIn: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
+  - Contact Form: https://ahmedaqeeldev.com/#contact
+
+## Recruiter Role Dossiers & Candidate Profiles
+For technical talent acquisition, engineering directors, CTOs, and recruiters evaluating candidate relevance:
+1. **Full Stack Developer Dossier**: https://ahmedaqeeldev.com/full-stack-developer
+   - Evaluated for: Full Stack Developer, Software Engineer, React/Next.js Engineer, Node.js Backend Developer.
+   - Primary Proof: BlindMatch UK, Blissful Blinds Ltd, Dev Orbit Tech.
+2. **AI Engineer Dossier**: https://ahmedaqeeldev.com/ai-engineer
+   - Evaluated for: Full Stack AI Developer, AI Engineer, LLM Integrator, Computer Vision / OCR Developer.
+   - Primary Proof: MediReport AI, Devsync Ai, Python AI Suite.
+3. **Mobile App Developer Dossier**: https://ahmedaqeeldev.com/mobile-developer
+   - Evaluated for: React Native Developer, Mobile Application Engineer, iOS/Android Cross-Platform Developer.
+   - Primary Proof: StudentNotes App, Organization Finance Management, Meta React Native Specialization.
+4. **SaaS Developer Dossier**: https://ahmedaqeeldev.com/saas-developer
+   - Evaluated for: SaaS Product Engineer, Startup MVP Developer, B2B Marketplace Developer.
+   - Primary Proof: BlindMatch UK (Paddle subscriptions), Restaurant Digital Menu System.
+
