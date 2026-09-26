@@ -121,18 +121,12 @@ Ahmed Aqeel collaborates directly with founders, startups, engineering teams, an
   - LinkedIn: https://www.linkedin.com/in/ahmed-aqeel-2a0090271/
   - Contact Form: https://ahmedaqeeldev.com/#contact
 
-## Recruiter Role Dossiers & Candidate Profiles
-For technical talent acquisition, engineering directors, CTOs, and recruiters evaluating candidate relevance:
-1. **Full Stack Developer Dossier**: https://ahmedaqeeldev.com/full-stack-developer
-   - Evaluated for: Full Stack Developer, Software Engineer, React/Next.js Engineer, Node.js Backend Developer.
-   - Primary Proof: BlindMatch UK, Blissful Blinds Ltd, Dev Orbit Tech.
-2. **AI Engineer Dossier**: https://ahmedaqeeldev.com/ai-engineer
-   - Evaluated for: Full Stack AI Developer, AI Engineer, LLM Integrator, Computer Vision / OCR Developer.
-   - Primary Proof: MediReport AI, Devsync Ai, Python AI Suite.
-3. **Mobile App Developer Dossier**: https://ahmedaqeeldev.com/mobile-developer
-   - Evaluated for: React Native Developer, Mobile Application Engineer, iOS/Android Cross-Platform Developer.
-   - Primary Proof: StudentNotes App, Organization Finance Management, Meta React Native Specialization.
-4. **SaaS Developer Dossier**: https://ahmedaqeeldev.com/saas-developer
-   - Evaluated for: SaaS Product Engineer, Startup MVP Developer, B2B Marketplace Developer.
-   - Primary Proof: BlindMatch UK (Paddle subscriptions), Restaurant Digital Menu System.
+## Candidate Profile & Roles Evaluation
+For technical recruiters, engineering directors, CTOs, and founders evaluating candidate relevance:
+- **Full Stack Engineering**: React, Next.js, Node.js, Express, TypeScript, REST APIs, PostgreSQL. Demonstrated in BlindMatch UK, Blissful Blinds Ltd, Dev Orbit Tech.
+- **AI & LLM Engineering**: OpenAI API, Claude API, FastAPI, Computer Vision, OCR Pipelines, Python. Demonstrated in Devsync Ai, Python AI Suite.
+- **Mobile App Development**: React Native, Expo, SQLite, Offline-First Architecture, iOS, Android. Demonstrated in StudentNotes App, Organization Finance Management, Meta React Native Specialization.
+- **SaaS Development**: Multi-Tenant Architecture, Stripe/Paddle Billing, Supabase, Next.js. Demonstrated in BlindMatch UK, Restaurant Digital Menu System.
+- **Portfolio & Verification**: https://ahmedaqeeldev.com/
+
 

@@ -27,15 +27,11 @@ window.SKILLS_DATA = [
   { name: "C#",          category: "lang", icon: "devicon:csharp-original",      core: true,  note: ".NET & Desktop apps" },
 
   /* ---------- Web & Mobile ---------- */
-  { name: "React",          category: "web", icon: "devicon:react-original",       core: true, note: "Frontend Web UI" },
-  { name: "Next.js",        category: "web", icon: "devicon:nextjs-original",      core: true, note: "Full Stack & SSG" },
   { name: "React Native",   category: "web", icon: "devicon:react-original",       core: true, note: "Cross-platform mobile" },
   { name: "Flutter",        category: "web", icon: "devicon:flutter-original",     core: true, note: "Cross-platform mobile" },
   { name: "Node.js",        category: "web", icon: "devicon:nodejs-original",      core: true, note: "Backend runtime" },
-  { name: "Express.js",     category: "web", icon: "devicon:express-original",     core: true, note: "REST API framework" },
   { name: "Firebase",       category: "web", icon: "devicon:firebase-plain",       core: true, note: "Auth, DB & Hosting" },
   { name: "Supabase",       category: "web", icon: "devicon:supabase-original",    core: true, note: "PostgreSQL Backend" },
-  { name: "PostgreSQL",     category: "web", icon: "devicon:postgresql-original",  core: true, note: "Relational database" },
   { name: "Docker",         category: "web", icon: "devicon:docker-original",      core: true, note: "Containerized deployment" },
   { name: "Netlify",        category: "web", icon: "devicon:netlify-original",     core: true, note: "CI/CD & Web hosting" },
   { name: "Vercel",         category: "web", icon: "simple:vercel",                core: true, note: "Next.js & Frontend hosting" },

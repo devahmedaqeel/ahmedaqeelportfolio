@@ -100,28 +100,4 @@
       <image:caption>Personal developer portfolio showcasing full stack web, mobile, SaaS, and AI engineering.</image:caption>
     </image:image>
   </url>
-  <url>
-    <loc>https://ahmedaqeeldev.com/full-stack-developer</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ahmedaqeeldev.com/ai-engineer</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ahmedaqeeldev.com/mobile-developer</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ahmedaqeeldev.com/saas-developer</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
 </urlset>
